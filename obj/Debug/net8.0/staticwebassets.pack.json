@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/scopedcss/projectbundle/MVC.Appointy.bundle.scp.css",
+      "PackagePath": "staticwebassets/MVC.Appointy.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MVC.Appointy.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.MVC.Appointy.props",
+      "PackagePath": "build\\MVC.Appointy.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MVC.Appointy.props",
+      "PackagePath": "buildMultiTargeting\\MVC.Appointy.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MVC.Appointy.props",
+      "PackagePath": "buildTransitive\\MVC.Appointy.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

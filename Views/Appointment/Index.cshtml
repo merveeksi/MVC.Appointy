@@ -1,0 +1,29 @@
+@model List<Appointment>
+
+@{
+    ViewData["Title"] = "Appointment Page";
+}
+
+<h1>@ViewData["Title"]</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Hasta T.C.</th>
+        <th>Hasta Adı</th>
+        <th>Hasta Soyadı</th>
+        <th>Cinsiyet</th>
+        <th>Randevu Tarihi</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var appointment in Model)
+    {
+        <tr>
+            <td>@Appointment.Patient.Tc</td>
+            <td>@Appointment.Patient.FullName</td>
+            <td>@Appointment.Patient.Gender</td>
+            <td>@Appointment.AppointmentDate.ToShortDateString()</td>
+        </tr>
+    }
+    </tbody>
+</table> 
