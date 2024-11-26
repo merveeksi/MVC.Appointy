@@ -2,7 +2,76 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="item" style="background: image('./wwwroot/img/img_1');">
+                <div class="content">
+                    <div class="name">Switzerland</div>
+                    <div class="description">Renowned for its breathtaking Alpine scenery and precision in craftsmanship</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background: url('https://i.postimg.cc/DZfgR0s8/Finland.jpg');">
+                <div class="content">
+                    <div class="name">Finland</div>
+                    <div class="description">Known for its saunas, lakes, and a deep connection to nature</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background: url('https://i.postimg.cc/kX2jn2HS/Iceland.jpg');">
+                <div class="content">
+                    <div class="name">Iceland</div>
+                    <div class="description">Famous for its stunning geothermal landscapes, waterfalls, and glaciers</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background: url('https://i.postimg.cc/05WWRYVx/Australia.jpg');">
+                <div class="content">
+                    <div class="name">Australia</div>
+                    <div class="description">Distinguished by its diverse ecosystems, ranging from beaches to bushland</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background: url('https://i.postimg.cc/dtg5DqMx/Netherland.jpg');">
+                <div class="content">
+                    <div class="name">Netherland</div>
+                    <div class="description">Characterized by its iconic canals, tulip fields, and windmills</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background: url('https://i.postimg.cc/sDGJktB9/Ireland.jpg');">
+                <div class="content">
+                    <div class="name">Ireland</div>
+                    <div class="description">Known for its lush green landscapes and rich cultural heritage</div>
+                    <button>See More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+<script src="main.js"></script>
+<script>let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+
+    next.addEventListener('click', function() {
+        let items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild(items[0]);
+    })
+
+    prev.addEventListener('click', function() {
+        let items = document.querySelectorAll('.item');
+        document.querySelector('.slide').prepend(items[items.length - 1]);
+    })
+</script>
+</body>

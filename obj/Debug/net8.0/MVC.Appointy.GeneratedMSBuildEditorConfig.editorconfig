@@ -26,8 +26,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Doctor/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9yL0luZGV4LmNzaHRtbA==
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Doctor/DoctorPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9yL0RvY3RvclBhbmVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Home/Index.cshtml]
@@ -38,8 +38,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9JbmRleC5jc2h0bWw=
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/PatientPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9QYXRpZW50UGFuZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/Register.cshtml]

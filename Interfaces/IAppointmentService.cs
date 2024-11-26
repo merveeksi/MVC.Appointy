@@ -6,4 +6,5 @@ using MVC.Appointy.Models;
 public interface IAppointmentService
 {
     List<Appointment> GetAllAppointments(); // Define methods as needed
+    void CreateAppointment(Appointment appointment);
 }

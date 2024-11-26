@@ -1,7 +1,7 @@
-@model List<Patient>
+@model Patient
 
 @{
-ViewData["Title"] = "Patient Page";
+    ViewData["Title"] = "Kayıt Ol";
 }
 
 <head>
@@ -10,28 +10,29 @@ ViewData["Title"] = "Patient Page";
     <title>Kayıt Ol</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 20px;
         }
         .container {
-            max-width: 400px;
+            max-width: 500px;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Başlık ve buton ortalanmış */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         h2 {
             color: #333;
+            margin-bottom: 20px;
         }
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: #555;
-            text-align: left; /* Etiketleri sola hizala */
+            text-align: left;
         }
         input[type="text"],
         input[type="password"],
@@ -39,71 +40,86 @@ ViewData["Title"] = "Patient Page";
         input[type="date"],
         select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Padding ve border'ı dahil et */
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input:focus,
+        select:focus {
+            border-color: #5cb85c;
+            outline: none;
         }
         button {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background-color: #5cb85c;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         button:hover {
             background-color: #4cae4c;
         }
+        .link {
+            margin-top: 15px;
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h2>Kayıt Ol</h2>
-        <form asp-action="Register" method="post">
-            <div>
-                <label for="FirstName">Ad:</label>
-                <input type="text" id="FirstName" name="FirstName" required />
-            </div>
-            <div>
-                <label for="LastName">Soyad:</label>
-                <input type="text" id="LastName" name="LastName" required />
-            </div>
-            <div>
-                <label for="Tc">T.C. Kimlik No:</label>
-                <input type="text" id="Tc" name="Tc" required/>
-            </div>
-            <div>
-                <label for="Gender">Cinsiyet:</label>
-                <select id="Gender" name="Gender" required>
-                    <option value="">Seçiniz</option>
-                    <option value="Male">Erkek</option>
-                    <option value="Female">Kadın</option>
-                    <option value="Other">Diğer</option>
-                </select>
-            </div>
-            <div>
-                <label for="BirthDate">Doğum Tarihi:</label>
-                <input type="date" id="BirthDate" name="BirthDate" required/>
-            </div>
-            <div>
-                <label for="Email">E-posta:</label>
-                <input type="email" id="Email" name="Email" required/>
-            </div>
-            <div>
-                <label for="Password">Şifre:</label>
-                <input type="password" id="Password" name="Password" required/>
-            </div>
-            <div>
-                <label for="ConfirmPassword">Şifreyi Tekrar Yaz:</label>
-                <input type="password" id="ConfirmPassword" name="ConfirmPassword" required/>
-            </div>
-            <div>
-                <button type="submit">Kayıt Ol</button>
-                <a asp-area="" asp-controller="Patient" asp-action="Login">Zaten hesabınız var mı? Giriş yapın.</a>
-            </div>
-        </form>
-    </div>
-</body>
+
+<div class="container">
+    <h2>Kayıt Ol</h2>
+    <form asp-action="Register" method="post">
+        <div>
+            <label for="FirstName">Ad:</label>
+            <input type="text" id="FirstName" name="FirstName" required />
+        </div>
+        <div>
+            <label for="LastName">Soyad:</label>
+            <input type="text" id="LastName" name="LastName" required />
+        </div>
+        <div>
+            <label for="Tc">T.C. Kimlik No:</label>
+            <input type="text" id="Tc" name="Tc" required />
+        </div>
+        <div>
+            <label for="Gender">Cinsiyet:</label>
+            <select id="Gender" name="Gender" required>
+                <option value="">Seçiniz</option>
+                <option value="Male">Erkek</option>
+                <option value="Female">Kadın</option>
+                <option value="Other">Diğer</option>
+            </select>
+        </div>
+        <div>
+            <label for="BirthDate">Doğum Tarihi:</label>
+            <input type="date" id="BirthDate" name="BirthDate" required />
+        </div>
+        <div>
+            <label for="Email">E-posta:</label>
+            <input type="email" id="Email" name="Email" required />
+        </div>
+        <div>
+            <label for="Password">Şifre:</label>
+            <input type="password" id="Password" name="Password" required />
+        </div>
+        <div>
+            <label for="ConfirmPassword">Şifreyi Tekrar Yaz:</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword" required />
+        </div>
+        <div>
+            <button type="submit">Kayıt Ol</button>
+            <a class="link" asp-area="" asp-controller="Patient" asp-action="Login">Zaten hesabınız var mı? Giriş yapın.</a>
+        </div>
+    </form>
+</div>

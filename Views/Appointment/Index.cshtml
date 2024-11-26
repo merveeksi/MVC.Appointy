@@ -19,10 +19,10 @@
     @foreach (var appointment in Model)
     {
         <tr>
-            <td>@Appointment.Patient.Tc</td>
-            <td>@Appointment.Patient.FullName</td>
-            <td>@Appointment.Patient.Gender</td>
-            <td>@Appointment.AppointmentDate.ToShortDateString()</td>
+            <td>@appointment.Patient.Tc</td>
+            <td>@appointment.Patient.FullName</td>
+            <td>@appointment.Patient.Gender</td>
+            <td>@appointment.AppointmentDate.ToShortDateString()</td>
         </tr>
     }
     </tbody>

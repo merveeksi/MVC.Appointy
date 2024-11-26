@@ -7,9 +7,9 @@ public class Appointment
 {
     [Key] 
     public int Id { get; set; }
-    public static DateTime AppointmentDate { get; set; }
-    public static string SelectedClinic { get; set; }
-    public static string SelectedDoctor { get; set; }
+    public DateTime AppointmentDate { get; set; }
+    public string SelectedClinic { get; set; }
+    public string SelectedDoctor { get; set; }
     
     public string Notes { get; set; }
 
@@ -21,9 +21,23 @@ public class Appointment
     public int PatientId { get; set; }
 
     [ForeignKey("PatientId")]
-    public static Patient Patient { get; set; }
+    public Patient Patient { get; set; }
 
-    public ICollection<Patient> Patients { get; set; }
-
+    public Appointment()
+    {
+        
+    }
     
+    public Appointment(int id, DateTime appointmentDate, string selectedClinic, string selectedDoctor, string notes, int doctorId, Doctor doctor, int patientId, Patient patient) : this()
+    {
+        Id = id;
+        AppointmentDate = appointmentDate;
+        SelectedClinic = selectedClinic;
+        SelectedDoctor = selectedDoctor;
+        Notes = notes;
+        DoctorId = doctorId;
+        Doctor = doctor;
+        PatientId = patientId;
+        Patient = patient;
+    }
 }

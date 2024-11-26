@@ -21,9 +21,15 @@ namespace MVC.Appointy.Controllers
             return View(appointments); // Pass appointments to the view
         }
 
-        public IActionResult Create()
+        [HttpPost]
+        public IActionResult Create(Appointment appointment)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _appointmentService.CreateAppointment(appointment);
+                return RedirectToAction("Index");
+            }
+            return View(appointment);
         }
     }
 }

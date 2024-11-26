@@ -1,54 +1,67 @@
-﻿<!DOCTYPE html>
-<html lang="en" data-theme="business" >
+<!DOCTYPE html>
+<html lang="en" data-theme="garden">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - MVC.Appointy</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.15/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/MVC.Appointy.styles.css" asp-append-version="true"/>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC.Appointy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="Index">Doktor Giriş</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Patient" asp-action="Index">Hasta Giriş</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="Index">Randevu Oluştur</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
+    <nav class="navbar bg-base-200">
+        <a class="btn btn-ghost text-xl" asp-controller="Home" asp-action="Index">
+            <i class="fas fa-hospital-user mr-2"></i>Appointy
+        </a>
+        <div class="navbar-center flex justify-center">
+            <ul class="flex items-center space-x-6">
+                <li>
+                    <a class="btn btn-ghost text-xl nav-link transition-opacity duration-500 ease-out opacity-100" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home mr-2"></i> Ana Sayfa
+                    </a></li>
+                <li>
+                    <a class="btn btn-ghost text-xl nav-link transition-opacity duration-500 ease-out opacity-100" asp-controller="Doctor" asp-action="Index">
+                        <i class="fas fa-user-md mr-2"></i> Doktor Giriş
+                    </a></li>
+                <li>
+                    <a class="btn btn-ghost text-xl nav-link transition-opacity duration-500 ease-out opacity-100" asp-controller="Patient" asp-action="Index">
+                        <i class="fas fa-user mr-2"></i> Hasta Giriş
+                    </a></li>
+                <li>
+                    <a class="btn btn-ghost text-xl nav-link transition-opacity duration-500 ease-out opacity-100" asp-controller="Appointment" asp-action="Index">
+                        <i class="fas fa-calendar-check mr-2"></i> Randevu Oluştur
+                    </a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                    <i class="fas fa-user-circle text-4xl"></i>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a asp-controller="Patient" asp-action="Login">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Hasta Girişi
+                    </a></li>
+                    <li><a asp-controller="Doctor" asp-action="Login">
+                        <i class="fas fa-user-md mr-2"></i>Doktor Girişi
+                    </a></li>
+                    <li><a asp-controller="Patient" asp-action="Register">
+                        <i class="fas fa-user-plus mr-2"></i>Kayıt Ol
+                    </a></li>
                 </ul>
             </div>
         </div>
     </nav>
-</header>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2024 - MVC.Appointy - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <script src="main.js"></script>
+    <div class="container mx-auto px-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
-</footer>
+</header>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>

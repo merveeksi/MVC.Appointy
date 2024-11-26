@@ -4,6 +4,24 @@ namespace MVC.Appointy.Models;
 
 public class Doctor
 {
+    public Doctor(int id, string firstName, string lastName, string gender, string tc, string specialty, string password, List<DateTime> freetime, ICollection<Appointment> appointments):this()
+    {
+        Id = id;
+        FirstName = firstName;
+        LastName = lastName;
+        Gender = gender;
+        Tc = tc;
+        Specialty = specialty;
+        Password = password;
+        Freetime = freetime;
+        Appointments = appointments;
+    }
+
+    public Doctor()
+    {
+        
+    }
+
     [Key]
     public int Id { get; set; }
     public string FirstName { get; set; }
@@ -17,5 +35,7 @@ public class Doctor
     {
         get { return FirstName + " " + LastName; }
     }
-    
+
+    public List<DateTime> Freetime { get; set; } //Doktor çalışma saatleri
+    public ICollection<Appointment> Appointments { get; set; }
 }

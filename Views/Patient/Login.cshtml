@@ -1,0 +1,35 @@
+@model MVC.Appointy.Models.Patient 
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="container mx-auto p-4 bg-white rounded-lg shadow-md max-w-md">
+        <h2 class="text-2xl font-bold text-center mb-6">Giriş Yap</h2>
+        <form asp-action="Login" method="post">
+            <div class="mb-4">
+                <label for="FirstName" class="block text-gray-700">Ad:</label>
+                <input type="text" id="FirstName" name="FirstName" required class="input input-bordered w-full" />
+            </div>
+            <div class="mb-4">
+                <label for="LastName" class="block text-gray-700">Soyad:</label>
+                <input type="text" id="LastName" name="LastName" required class="input input-bordered w-full" />
+            </div>
+            <div class="mb-4">
+                <label for="Email" class="block text-gray-700">E-posta:</label>
+                <input type="email" id="Email" name="Email" required class="input input-bordered w-full" />
+            </div>
+            <div class="mb-4">
+                <label for="Password" class="block text-gray-700">Parola:</label>
+                <input type="password" id="Password" name="Password" required class="input input-bordered w-full" />
+            </div>
+            <div class="mb-4">
+                <button type="submit" class="btn btn-primary w-full">Giriş Yap</button>
+            </div>
+            <div class="text-center">
+                <a class="link link-primary" asp-area="" asp-controller="Patient" asp-action="Register">Hesabınız yok mu? Kayıt olun.</a>
+            </div>
+        </form>
+    </div>
+</body>

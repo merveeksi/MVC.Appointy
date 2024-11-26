@@ -1,13 +1,20 @@
+using MVC.Appointy.Data;
 using MVC.Appointy.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MVC.Appointy.Services;
 
-// Create a new file: MVC.Appointy/Services/AppointmentService.cs
-public class AppointmentService : IAppointmentService
+public class AppointmentService(AppointyDbContext db) : IAppointmentService
 {
-    // Implement the methods defined in the interface
     public List<Appointment> GetAllAppointments()
     { 
-        // Logic to retrieve appointments from the database
+        return db.Appointments.ToList();
+    }
+
+    public void CreateAppointment(Appointment appointment)
+    {
+        db.Appointments.Add(appointment);
+        db.SaveChanges();
     }
 }

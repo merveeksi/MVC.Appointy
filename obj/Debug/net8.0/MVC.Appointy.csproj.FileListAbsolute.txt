@@ -92,6 +92,7 @@
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.MvcApplicationPartsAssemblyInfo.cache
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.RazorAssemblyInfo.cache
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.RazorAssemblyInfo.cs
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.sourcelink.json
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/staticwebassets.build.json
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/staticwebassets.development.json
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/staticwebassets/msbuild.MVC.Appointy.Microsoft.AspNetCore.StaticWebAssets.props
@@ -108,3 +109,5 @@
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.pdb
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.genruntimeconfig.cache
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/ref/MVC.Appointy.dll
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.AspNetCore.Authorization.dll
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.AspNetCore.Metadata.dll
