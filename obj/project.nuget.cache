@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "drJFGBZH8uo=",
+  "dgSpecHash": "PsLaLhUOUlw=",
   "success": true,
   "projectFilePath": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/MVC.Appointy.csproj",
   "expectedPackageFiles": [
     "/Users/pc/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/pc/.nuget/packages/microsoft.aspnetcore.authentication.google/8.0.11/microsoft.aspnetcore.authentication.google.8.0.11.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.authorization/8.0.11/microsoft.aspnetcore.authorization.8.0.11.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.aspnetcore.metadata/8.0.11/microsoft.aspnetcore.metadata.8.0.11.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

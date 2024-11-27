@@ -1,0 +1,15 @@
+/* Genel stil ayarları */
+body[b-zuk6j4em62] {
+    font-family: 'Jost', sans-serif; /* Yazı tipi ayarı */
+    background-color: #eaeaea; /* Arka plan rengi */
+}
+
+/* Container ayarları */
+.container[b-zuk6j4em62] {
+    max-width: 400px; /* Maksimum genişlik */
+    margin: auto; /* Ortala */
+    padding: 20px; /* İç boşluk */
+    background-color: white; /* Arka plan rengi */
+    border-radius: 8px; /* Yuvarlak köşeler */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}

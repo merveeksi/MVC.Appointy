@@ -14,8 +14,28 @@ public class DoctorController : Controller
     {
         _db = db;
     }
+    
+    [HttpGet("login")]
+    public IActionResult Login()
+    {
+        return View();
+    }
 
-    // GET
+    // POST: /Doctor/Login
+    [HttpPost]
+    public IActionResult Login(Doctor doctor)
+    {
+        var doctorInDb = _db.Doctors.FirstOrDefault(d => d.Email == doctor.Email && d.Password == doctor.Password);
+        if (doctorInDb == null)
+        {
+            ModelState.AddModelError("LoginFailed", "Login failed. Please check your credentials.");
+            return View(doctor);
+        }
+        return RedirectToAction("DoctorPanel");
+    }
+    
+    // GET: /Doctor/DoctorPanel
+    [HttpPost("doctorpanel")]
     public IActionResult DoctorPanel()
     {
         // List<Doctor> objDoctorList = _db.Doctors.ToList();

@@ -33,6 +33,14 @@
       "PackagePath": "staticwebassets/img/img_5.jpg"
     },
     {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/img/img_6.jpg",
+      "PackagePath": "staticwebassets/img/img_6.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/img/logo.png",
+      "PackagePath": "staticwebassets/img/logo.png"
+    },
+    {
       "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

@@ -7,6 +7,8 @@
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/MVC.Appointy.dll
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/MVC.Appointy.pdb
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Humanizer.dll
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.AspNetCore.Authorization.dll
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.AspNetCore.Metadata.dll
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.CodeAnalysis.CSharp.dll
@@ -109,5 +111,7 @@
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.pdb
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.genruntimeconfig.cache
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/ref/MVC.Appointy.dll
-/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.AspNetCore.Authorization.dll
-/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.AspNetCore.Metadata.dll
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/scopedcss/Views/Doctor/Login.cshtml.rz.scp.css
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.Google.dll
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/scopedcss/Views/Patient/Login.cshtml.rz.scp.css
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/scopedcss/Views/Home/Index.cshtml.rz.scp.css

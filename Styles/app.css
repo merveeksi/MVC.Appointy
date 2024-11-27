@@ -5,25 +5,21 @@
 
 html {
     font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 16px;
+        font-size: 16px; 
     }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    margin-bottom: 60px;
 }
 .navbar-nav {
     display: flex; /* Flexbox kullanarak yan yana dizilmesini sağla */
@@ -31,7 +27,6 @@ body {
     padding: 0; /* Varsayılan padding'i kaldır */
     margin: 0; /* Varsayılan margin'i kaldır */
 }
-
 .nav-item {
     margin-right: 15px; /* Öğeler arasına boşluk ekle */
 }
@@ -68,16 +63,6 @@ body {
     overflow: hidden;
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-    height: 600px;
-    background: #f5f5f5;
-    box-shadow: 0 30px 50px #dbdbdb;
-}
 
 .container .slide .item {
     width: 200px;
@@ -106,19 +91,19 @@ body {
 .slide .item:nth-child(2) .content { display: block; }
 
 .slide .item:nth-child(3) {
-    left: 50%;
+    left: 60%;
 }
 
 .slide .item:nth-child(4) {
-    left: calc(50% + 220px);
+    left: calc(60% + 220px);
 }
 
 .slide .item:nth-child(5) {
-    left: calc(50% + 440px);
+    left: calc(60% + 440px);
 }
 
 .slide .item:nth-child(n + 6) {
-    left: calc(50% + 440px);
+    left: calc(60% + 440px);
     overflow: hidden;
 }
 
@@ -193,3 +178,37 @@ body {
     background: #ababab;
     color: #fff;
 }
+.framed-button {
+    border: 2px solid white; /* Çerçeve rengi */
+    background-color: transparent; /* Arka plan rengi */
+    color: white; /* Yazı rengi */
+    padding: 10px 20px; /* İç boşluk */
+    border-radius: 5px; /* Yuvarlak köşeler */
+    cursor: pointer; /* İmleç değişimi */
+    transition: background-color 0.3s, color 0.3s; /* Geçiş efekti */
+}
+
+.framed-button:hover {
+    background-color: white; /* Hover durumunda arka plan rengi */
+    color: black; /* Hover durumunda yazı rengi */
+}
+/* Sayfanın tümünü kapsayacak yapı */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main-footer {
+    flex: 1; /* İçeriği esnek yapar ve footer'ı aşağı iter */
+}
+
+
+
