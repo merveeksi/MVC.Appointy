@@ -8,10 +8,12 @@ public class Appointment
     [Key] 
     public int Id { get; set; }
     public DateTime AppointmentDate { get; set; }
+
+    public DateTime AppointmentTime { get; set; }
     public string SelectedClinic { get; set; }
     public string SelectedDoctor { get; set; }
     
-    public string Notes { get; set; }
+    public string? Notes { get; set; }
 
     public int DoctorId { get; set; }
 
@@ -28,9 +30,10 @@ public class Appointment
         
     }
     
-    public Appointment(int id, DateTime appointmentDate, string selectedClinic, string selectedDoctor, string notes, int doctorId, Doctor doctor, int patientId, Patient patient) : this()
+    public Appointment(int id, DateTime appointmentTime ,DateTime appointmentDate, string selectedClinic, string selectedDoctor, string notes, int doctorId, Doctor doctor, int patientId, Patient patient) : this()
     {
         Id = id;
+        AppointmentTime = appointmentTime;
         AppointmentDate = appointmentDate;
         SelectedClinic = selectedClinic;
         SelectedDoctor = selectedDoctor;

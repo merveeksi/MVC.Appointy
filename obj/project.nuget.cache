@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PsLaLhUOUlw=",
+  "dgSpecHash": "q/5vWgD6et0=",
   "success": true,
   "projectFilePath": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/MVC.Appointy.csproj",
   "expectedPackageFiles": [
@@ -30,13 +30,10 @@
     "/Users/pc/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/pc/.nuget/packages/npgsql/8.0.6/npgsql.8.0.6.nupkg.sha512",
     "/Users/pc/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.11/npgsql.entityframeworkcore.postgresql.8.0.11.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.composition/6.0.0/system.composition.6.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.composition.attributedmodel/6.0.0/system.composition.attributedmodel.6.0.0.nupkg.sha512",
@@ -44,22 +41,11 @@
     "/Users/pc/.nuget/packages/system.composition.hosting/6.0.0/system.composition.hosting.6.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.composition.runtime/6.0.0/system.composition.runtime.6.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.composition.typedparts/6.0.0/system.composition.typedparts.6.0.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.globalization/4.3.0/system.globalization.4.3.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.io.pipelines/6.0.3/system.io.pipelines.6.0.3.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.linq/4.3.0/system.linq.4.3.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.reflection.metadata/6.0.1/system.reflection.metadata.6.0.1.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.resources.resourcemanager/4.3.0/system.resources.resourcemanager.4.3.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.runtime.extensions/4.3.0/system.runtime.extensions.4.3.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
-    "/Users/pc/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512"
+    "/Users/pc/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

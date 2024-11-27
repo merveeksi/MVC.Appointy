@@ -4,33 +4,79 @@
 ViewData["Title"] = "Appointment Create";
 }
 
-<div class="container mx-auto p-4">
-    <h2 class="text-2xl font-semibold mb-4">Randevu Oluştur</h2>
-    <form method="post" asp-action="SaveAppointment" asp-controller="Patient" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <input type="hidden" name="patientId" value="" />
+<div class="container">
+    <form method="form" asp-action="Create" asp-controller="Appointment" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <input type="hidden" name="PatientId" value="@Model.PatientId" />
+        <input type="hidden" name="DoctorId" value="@Model.DoctorId" />
+        <p class="title">Randevu Oluştur</p>
         <div class="mb-4">
-            <label for="Specialty" class="block text-gray-700 text-sm font-bold mb-2">Klinik Seçiniz:</label>
-            <select id="Specialty" name="specialty" required class="select select-bordered w-full">
-                <option value="">Select...</option>
-                @* @foreach (var specialty in Model.Specialty) *@
-                @* { *@
-                @*     <option value="@specialty">@specialty</option> *@
-                @* } *@
+            <label for="AppointmentDate" class="block text-gray-700 text-sm font-bold mb-2">Randevu Tarihini Seçiniz:</label>
+            <input type="date" id="AppointmentDate" name="AppointmentDate" required class="input input-bordered w-full" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+        </div>
+        <div class="mb-4">
+            <label for="AppointmentTime" class="block text-gray-700 text-sm font-bold mb-2">Randevu Saatini Seçiniz:</label>
+        <div class="flex">
+            <select id="AppointmentHour" name="AppointmentHour" required class="input input-bordered w-1/2 mr-2">
+                @for (int hour = 8; hour < 17; hour++)
+                {
+                    <option value="@hour.ToString("D2")">@hour.ToString("D2")</option>
+                }
             </select>
-        </div>
-        <div class="mb-4">
-            <label for="Doctor" class="block text-gray-700 text-sm font-bold mb-2">Doktor Seçiniz:</label>
-            <select id="Doctor" name="doctorName" required class="select select-bordered w-full">
-                <option value="">Select...</option>
-                <!-- Doctors will be populated here based on the selected department -->
+            <select id="AppointmentMinute" name="AppointmentMinute" required class="input input-bordered w-1/2">
+                @for (int minute = 0; minute < 60; minute += 15)
+                {
+                    if (minute == 0 && DateTime.Now.Hour == 12) continue;
+                    if (minute == 15 && DateTime.Now.Hour == 12) continue;
+                    if (minute == 30 && DateTime.Now.Hour == 12) continue;
+                    if (minute == 45 && DateTime.Now.Hour == 12) continue;
+                    <option value="@minute.ToString("D2")">@minute.ToString("D2")</option>
+                }
             </select>
+            </div>
         </div>
         <div class="mb-4">
-            <label for="AppointmentDate" class="block text-gray-700 text-sm font-bold mb-2">Randevu Zamanı Seçiniz:</label>
-            <input type="date" id="AppointmentDate" name="appointmentDate" required class="input input-bordered w-full" />
+            <textarea placeholder="Notlar için buraya yazınız..." id="notes" name="notes" class="textarea textarea-bordered w-full"></textarea>
         </div>
-        <div>
-            <button type="submit" class="btn btn-primary w-full">Randevu Al</button>
-        </div>
+        <button class="btn" type="submit">Randevu Al</button>
     </form>
-</div>
+  </div>
+  
+
+@* <div class="container mx-auto p-4"> *@
+@*     <h2 class="text-2xl font-semibold mb-4">Randevu Oluştur</h2> *@
+@*     <form method="post" asp-action="Create" asp-controller="Appointment" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"> *@
+@*         <input type="hidden" name="PatientId" value="@Model.PatientId" /> *@
+@*         <input type="hidden" name="DoctorId" value="@Model.DoctorId" /> *@
+@*         <div class="mb-4"> *@
+@*             <label for="AppointmentDate" class="block text-gray-700 text-sm font-bold mb-2">Randevu Tarihini Seçiniz:</label> *@
+@*             <input type="date" id="AppointmentDate" name="AppointmentDate" required class="input input-bordered w-full" min="@DateTime.Now.ToString("yyyy-MM-dd")" /> *@
+@*         </div> *@
+        @* <div class="mb-4"> *@
+        @*     <label for="AppointmentTime" class="block text-gray-700 text-sm font-bold mb-2">Randevu Saatini Seçiniz:</label> *@
+        @*     <div class="flex"> *@
+        @*         <select id="AppointmentHour" name="AppointmentHour" required class="input input-bordered w-1/2 mr-2"> *@
+        @*             @for (int hour = 8; hour < 17; hour++) *@
+        @*             { *@
+        @*                 <option value="@hour.ToString("D2")">@hour.ToString("D2")</option> *@
+        @*             } *@
+        @*         </select> *@
+        @*         <select id="AppointmentMinute" name="AppointmentMinute" required class="input input-bordered w-1/2"> *@
+        @*             @for (int minute = 0; minute < 60; minute += 15) *@
+        @*             { *@
+        @*                 if (minute == 0 && DateTime.Now.Hour == 12) continue; *@
+        @*                 if (minute == 15 && DateTime.Now.Hour == 12) continue; *@
+        @*                 if (minute == 30 && DateTime.Now.Hour == 12) continue; *@
+        @*                 if (minute == 45 && DateTime.Now.Hour == 12) continue; *@
+        @*                 <option value="@minute.ToString("D2")">@minute.ToString("D2")</option> *@
+        @*             } *@
+        @*         </select> *@
+        @*     </div> *@
+        @* </div> *@
+@*         <div class="mb-4"> *@
+@*             <textarea id="notes" name="notes" placeholder="Notlar için buraya yazınız..." class="textarea textarea-bordered w-full"></textarea> *@
+@*         </div> *@
+@*         <div> *@
+@*             <button type="submit" class="btn btn-primary w-full">Randevu Al</button> *@
+@*         </div> *@
+@*     </form> *@
+@* </div> *@

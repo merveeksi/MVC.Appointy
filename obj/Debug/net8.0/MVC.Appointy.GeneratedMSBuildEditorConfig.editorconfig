@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/pc/Desktop/MVC.Appointy/MVC.Appointy
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Appointment/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnQvQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Appointment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,10 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/PatientPanel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9QYXRpZW50UGFuZWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Shared/Error.cshtml]
@@ -58,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Appointment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnQvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-0dkmcpxvzk
+
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Doctor/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9yL0xvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-zuk6j4em62
@@ -69,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope = b-rgk5b120ma
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-xoj05zyggx
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ergxw130q0
 
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
