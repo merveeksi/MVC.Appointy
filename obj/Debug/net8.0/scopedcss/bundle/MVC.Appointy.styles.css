@@ -1,3 +1,279 @@
+/* _content/MVC.Appointy/Views/Appointment/Create.cshtml.rz.scp.css */
+[b-0dkmcpxvzk]::selection {
+    background-color: gray;
+}
+
+.container[b-0dkmcpxvzk] {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form[b-0dkmcpxvzk] {
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to bottom, #424242, #212121);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+
+.title[b-0dkmcpxvzk] {
+    color: wheat;
+    margin: 3rem 0;
+    font-size: 2rem;
+}
+
+.input[b-0dkmcpxvzk] {
+    margin: 0.5rem 0;
+    padding: 1rem 0.5rem;
+    width: 20rem;
+    background-color: inherit;
+    color: wheat;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid wheat;
+    transition: all 400ms;
+}
+.input:hover[b-0dkmcpxvzk] {
+    background-color: #424242;
+    border: none;
+    border-radius: 0.5rem;
+}
+.btn[b-0dkmcpxvzk] {
+    height: 3rem;
+    width: 20rem;
+    margin-top: 3rem;
+    background-color: wheat;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    transition: all 400ms;
+    cursor: pointer;
+    box-shadow:
+            0 0 10px antiquewhite,
+            0 0 10px antiquewhite;
+}
+.btn:hover[b-0dkmcpxvzk] {
+    background-color: antiquewhite;
+    box-shadow: none;
+}
+/* _content/MVC.Appointy/Views/Contact/Contact.cshtml.rz.scp.css */
+html[b-m79i3xg3jz],body[b-m79i3xg3jz] {
+    margin: 0;
+    height: 100%;
+    background:#D4E157;
+    text-align: center;
+    font-family: 'Ubuntu';
+    overflow-y: auto;
+}
+.container[b-m79i3xg3jz] {
+    padding: 50px 20px;
+    margin-top: 50px;
+}
+.frame[b-m79i3xg3jz]{
+    width: 600px;
+    height: auto;
+    margin: 250px auto 0;
+    position: relative;
+    background: #435d77;
+    border-radius:0 0 40px 40px;
+}
+#button_open_envelope[b-m79i3xg3jz]{
+    width: 180px;
+    height: 30px;
+    position: absolute;
+    z-index: 311;
+    top: 250px;
+    left: 208px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 26px;
+    padding:15px 0;
+    border: 2px solid #fff;
+    transition:.3s;
+}
+#button_open_envelope:hover[b-m79i3xg3jz]{
+    background: #FFF;
+    color: #2b67cb;
+    transform:scale(1.1);
+    transition:background .25s, transform .5s ease-in;
+    cursor: pointer;
+}
+.message[b-m79i3xg3jz]{
+    position: relative;
+    width: 580px;
+    min-height:300px;
+    height: auto;
+    background: #fff;
+    margin: 0 auto;
+    top: 30px;
+    box-shadow: 0 0 5px 2px #333;
+    transition:2s ease-in-out;
+    transition-delay:1.5s;
+    z-index: 300;
+}
+.left[b-m79i3xg3jz],.right[b-m79i3xg3jz],.top[b-m79i3xg3jz]{width: 0;	height: 0;position:absolute;top:0;z-index: 310;}
+.left[b-m79i3xg3jz]{
+    border-left: 300px solid #337efc;
+    border-top: 160px solid transparent;
+    border-bottom: 160px solid transparent;
+}
+.right[b-m79i3xg3jz]{
+    border-right: 300px solid #337efc;
+    border-top: 160px solid transparent;
+    border-bottom: 160px solid transparent;;
+    left:300px;
+}
+.top[b-m79i3xg3jz]{
+    border-right: 300px solid transparent;
+    border-top: 200px solid #03A9F4;
+    border-left: 300px solid transparent;
+    transition:transform 1s,border 1s, ease-in-out;
+    transform-origin:top;
+    transform:rotateX(0deg);
+    z-index: 500;
+}
+.bottom[b-m79i3xg3jz]{
+    width: 600px;
+    height: 190px;
+    position: absolute;
+    background: #2b67cb;
+    top: 160px;
+    border-radius:0 0 30px 30px;
+    z-index: 310;
+}
+
+.open[b-m79i3xg3jz]{
+    transform-origin:top;
+    transform:rotateX(180deg);
+    transition:transform .7s,border .7s,z-index .7s ease-in-out;
+    border-top: 200px solid #2c3e50;
+    z-index: 200;
+}
+.pull[b-m79i3xg3jz]{
+    -webkit-animation:message_animation 2s 1 ease-in-out;
+    animation:message_animation-b-m79i3xg3jz 2s 1 ease-in-out;
+    -webkit-animation-delay:.9s;
+    animation-delay:.45s;
+    transition:1.5s;
+    transition-delay:1s;
+    z-index: 350;
+}
+#fullName[b-m79i3xg3jz],#email[b-m79i3xg3jz],#phone[b-m79i3xg3jz],#messarea[b-m79i3xg3jz],#send[b-m79i3xg3jz]{
+    margin: 0;
+    padding: 0 0 0 10px;
+    width: 570px;
+    height:40px;
+    float: left;
+    display: block;
+    font-size: 18px;
+    color: #2b67cb;
+    border:none;
+    border-bottom:1px solid #bdbdbd;
+    letter-spacing: normal;
+}
+#messarea[b-m79i3xg3jz]{
+    height: 117px;
+    width: 560px;
+    overflow: auto;
+    border:none;
+    padding: 10px;
+}
+#send[b-m79i3xg3jz]{
+    width:   580px;
+    padding: 0;
+    border:  none;
+    cursor:  pointer;
+    background: #7CB342;
+    color: #fff;
+    transition:.35s;
+    letter-spacing: 1px;
+}
+#send:hover[b-m79i3xg3jz]{background:tomato;transition:.35s;}
+
+[b-m79i3xg3jz]::-moz-placeholder{color: #7CB342;font-family: 'Ubuntu';font-size: 20px;opacity: 1;}
+[b-m79i3xg3jz]::-webkit-input-placeholder {color: #7CB342; font-family: 'Ubuntu';font-size: 20px;}
+*:focus[b-m79i3xg3jz] {outline: none;}
+input:focus:invalid[b-m79i3xg3jz],textarea:focus:invalid[b-m79i3xg3jz] {
+    /* when a field is considered invalid by the browser */
+    background: #fff url(images/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border:1px solid #b03535;
+}
+input:required:valid[b-m79i3xg3jz],textarea:required:valid[b-m79i3xg3jz] {
+    /* when a field is considered valid by the browser */
+    background: #fff url(images/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+
+@-webkit-keyframes message_animation {
+    0%{
+        transform:translatey(0px);
+        z-index: 300;
+        transition: 1s ease-in-out;
+    }
+    50%{
+        transform:translatey(-340px);
+        z-index: 300;
+        transition: 1s ease-in-out;
+    }
+    51%{
+        transform:translatey(-340px);
+        z-index: 350;
+        transition: 1s ease-in-out;
+    }
+    100%{
+        transform:translatey(0px);
+        z-index: 350;
+        transition: 1s ease-in-out;
+    }
+}
+@keyframes message_animation-b-m79i3xg3jz {
+    0%{
+        transform:translatey(0px);
+        z-index: 300;
+        transition: 1s ease-in-out;
+    }
+    50%{
+        transform:translatey(-340px);
+        z-index: 300;
+        transition: 1s ease-in-out;
+    }
+    51%{
+        transform:translatey(-340px);
+        z-index: 350;
+        transition: 1s ease-in-out;
+    }
+    100%{
+        transform:translatey(0px);
+        z-index: 350;
+        transition: 1s ease-in-out;
+    }
+}
+html[b-m79i3xg3jz], body[b-m79i3xg3jz] {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+}
+
+/* Kaydırma çubuğu stilleri */
+body[b-m79i3xg3jz]::-webkit-scrollbar {
+    width: 8px;
+}
+
+body[b-m79i3xg3jz]::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+body[b-m79i3xg3jz]::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
 /* _content/MVC.Appointy/Views/Doctor/Login.cshtml.rz.scp.css */
 /* Genel stil ayarları */
 body[b-zuk6j4em62] {
@@ -209,6 +485,210 @@ body[b-zuk6j4em62] {
   
   
   
+/* _content/MVC.Appointy/Views/Patient/Register.cshtml.rz.scp.css */
+
+body[b-ergxw130q0] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+}
+.container[b-ergxw130q0] {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h2[b-ergxw130q0] {
+    color: #333;
+    margin-bottom: 20px;
+}
+label[b-ergxw130q0] {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: left;
+}
+input[type="text"][b-ergxw130q0],
+input[type="password"][b-ergxw130q0],
+input[type="email"][b-ergxw130q0],
+input[type="date"][b-ergxw130q0],
+select[b-ergxw130q0] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+input:focus[b-ergxw130q0],
+select:focus[b-ergxw130q0] {
+    border-color: #5cb85c;
+    outline: none;
+}
+button[b-ergxw130q0] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover[b-ergxw130q0] {
+    background-color: #4cae4c;
+}
+.link[b-ergxw130q0] {
+    margin-top: 15px;
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+}
+.link:hover[b-ergxw130q0] {
+    text-decoration: underline;
+}
+.form[b-ergxw130q0] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.title[b-ergxw130q0] {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+}
+
+.title[b-ergxw130q0]::before {
+    width: 18px;
+    height: 18px;
+}
+
+.title[b-ergxw130q0]::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse-b-ergxw130q0 1s linear infinite;
+}
+
+.title[b-ergxw130q0]::before,
+.title[b-ergxw130q0]::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
+}
+
+.message[b-ergxw130q0],
+.signin[b-ergxw130q0] {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signin[b-ergxw130q0] {
+    text-align: center;
+}
+
+.signin a:hover[b-ergxw130q0] {
+    text-decoration: underline royalblue;
+}
+
+.signin a[b-ergxw130q0] {
+    color: #00bfff;
+}
+
+.flex[b-ergxw130q0] {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label[b-ergxw130q0] {
+    position: relative;
+}
+
+.form label .input[b-ergxw130q0] {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input + span[b-ergxw130q0] {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span[b-ergxw130q0] {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus + span[b-ergxw130q0],
+.form label .input:valid + span[b-ergxw130q0] {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.input[b-ergxw130q0] {
+    font-size: medium;
+}
+
+.submit[b-ergxw130q0] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #00bfff;
+}
+
+.submit:hover[b-ergxw130q0] {
+    background-color: #00bfff96;
+}
+
+@keyframes pulse-b-ergxw130q0 {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
 /* _content/MVC.Appointy/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

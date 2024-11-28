@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MVC.Appointy.Models.Enums;
 
 namespace MVC.Appointy.Models;
 
@@ -10,7 +11,7 @@ public class Appointment
     public DateTime AppointmentDate { get; set; }
 
     public DateTime AppointmentTime { get; set; }
-    public string SelectedClinic { get; set; }
+    public Clinic SelectedClinic { get; set; }
     public string SelectedDoctor { get; set; }
     
     public string? Notes { get; set; }
@@ -30,7 +31,7 @@ public class Appointment
         
     }
     
-    public Appointment(int id, DateTime appointmentTime ,DateTime appointmentDate, string selectedClinic, string selectedDoctor, string notes, int doctorId, Doctor doctor, int patientId, Patient patient) : this()
+    public Appointment(int id, DateTime appointmentTime ,DateTime appointmentDate, Clinic selectedClinic, string selectedDoctor, string notes, int doctorId, Doctor doctor, int patientId, Patient patient) : this()
     {
         Id = id;
         AppointmentTime = appointmentTime;

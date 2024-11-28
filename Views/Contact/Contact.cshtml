@@ -1,0 +1,59 @@
+@model MVC.Appointy.Models.Contact
+
+@{
+    ViewData["Title"] = "İletişim";
+}
+
+<body>
+    <div class="container">
+        <div style="text-align: center; margin-top: 50px;">
+            <h2 style="font-size: 2.5em; color: #2b67cb;">İLETİŞİM</h2>
+            <br/>
+            <h3 style="font-size: 1.8em; color: #333;">Giray Hastanesi</h3>
+            <div class="info" style="font-size: 1.2em; margin: 10px 0;">
+                <strong>Adres:</strong> İstanbul Giray Üniversitesi Sağlık Uygulama ve Araştırma Merkezi Hastanesi, Üsküdar, Dostlar Mahallesi, Türkkan Caddesi No:1, 34340 Üsküdar / İstanbul
+            </div>
+            <div class="info" style="font-size: 1.2em; margin: 10px 0;">
+                <strong>Telefon:</strong> 02124401000
+            </div>
+            <div class="info" style="font-size: 1.2em; margin: 10px 0;">
+                <strong>Faks:</strong> 02124401000
+            </div>
+            <div class="info" style="font-size: 1.2em; margin: 10px 0;">
+                <strong>E-Posta:</strong> infouskudar@giray.edu.tr
+            </div>
+        </div>
+
+        <div class="frame" style="margin-top: 160px; text-align: center;">
+            <button id="button_open_envelope" class="framed-button" style="width: 180px; height: 60px; font-size: 20px;">Mesaj Gönder</button>
+            <div class="message">
+                <form method="post" style="margin-bottom: 20px;" action="@Url.Action("Contact", "Contact")">
+                    <input type="text" name="fullName" id="fullName" placeholder=" Ad ve Soyad* " required>
+                    <input type="text" name="email" id="email" placeholder=" E-Posta*" required pattern="^[a-zA-Z0-9._-]+[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$"> 
+                    <textarea name="message" id="messarea" placeholder=" Mesaj* " required></textarea>
+                    <input type="text" name="address" id="address" style="display: none;">
+                    <input type="submit" value="Gönder" id="send">
+                </form>
+            </div>
+            <div class="bottom"></div>			
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+        $(document).ready(function(){
+            $('#button_open_envelope').click(function(){
+                $('.top').addClass('open');
+                $('.message').addClass('pull');
+            });
+        });
+    </script>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+
