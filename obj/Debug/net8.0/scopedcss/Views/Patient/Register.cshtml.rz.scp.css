@@ -1,6 +1,6 @@
-body { font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0 }
+body[b-ergxw130q0] { font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0 }
 
-p {
+p[b-ergxw130q0] {
 	text-transform: uppercase;
 	letter-spacing: .5em;
 	display: inline-block;
@@ -47,7 +47,7 @@ p {
 	100% { background-position: 100% 50%; }
 }
 
-.form {
+.form[b-ergxw130q0] {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -62,14 +62,14 @@ p {
     background-color: #000e0c;
   
     box-shadow: 0 4px 8px rgba(218, 19, 19, 0.1);
-    animation: scaleIn 0.5s ease-in-out;
+    animation: scaleIn-b-ergxw130q0 0.5s ease-in-out;
     border: 2px solid #343a40; /* Dış kısım koyu renk */
 }
-.form label {
+.form label[b-ergxw130q0] {
     position: relative;
 }
 
-.form label .input {
+.form label .input[b-ergxw130q0] {
     background-color: #333;
     color: #fff;
     width: 100%;
@@ -79,7 +79,7 @@ p {
     border-radius: 10px;
 }
 
-.form label .input + span {
+.form label .input + span[b-ergxw130q0] {
     color: rgba(255, 255, 255, 0.5);
     position: absolute;
     left: 10px;
@@ -89,20 +89,20 @@ p {
     transition: 0.3s ease;
 }
 
-.form label .input:placeholder-shown + span {
+.form label .input:placeholder-shown + span[b-ergxw130q0] {
     top: 12.5px;
     font-size: 0.9em;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+.form label .input:focus + span[b-ergxw130q0],
+.form label .input:valid + span[b-ergxw130q0] {
     color: #00bfff;
     top: 0px;
     font-size: 0.7em;
     font-weight: 600;
 }
 
-.title {
+.title[b-ergxw130q0] {
     top: 70px;
     font-size: 28px;
     font-weight: 600;
@@ -115,19 +115,19 @@ p {
     margin-top: 60px;
 }
 
-.title::before {
+.title[b-ergxw130q0]::before {
     width: 18px;
     height: 18px;
 }
 
-.title::after {
+.title[b-ergxw130q0]::after {
     width: 18px;
     height: 18px;
-    animation: pulse 1s linear infinite;
+    animation: pulse-b-ergxw130q0 1s linear infinite;
 }
 
-.title::before,
-.title::after {
+.title[b-ergxw130q0]::before,
+.title[b-ergxw130q0]::after {
     position: absolute;
     content: "";
     height: 16px;
@@ -136,19 +136,19 @@ p {
     left: 0px;
     background-color: #00bfff;
 }
-    .title {
+    .title[b-ergxw130q0] {
         text-align: center;
         font-size: 24px;
         margin-bottom: 10px;
     }
-.flex {
+.flex[b-ergxw130q0] {
     display: flex;
     width: 100%;
     gap: 6px;
 }
 
 /* Kayıt ol animasyon */
-@keyframes pulse {
+@keyframes pulse-b-ergxw130q0 {
     from {
         transform: scale(0.9);
         opacity: 1;
@@ -159,10 +159,10 @@ p {
         opacity: 0;
     }
 }
-@keyframes scaleIn {
+@keyframes scaleIn-b-ergxw130q0 {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
-}    .input {
+}    .input[b-ergxw130q0] {
          width: 100%;
          padding: 10px;
          margin: 10px 0;
@@ -171,7 +171,7 @@ p {
          transition: border-color 0.3s;
      }
 
-body {
+body[b-ergxw130q0] {
     margin: 0;
     font: 30% / 1.5 Raleway, sans-serif;
     color: hsl(230, 100%, 95%);
@@ -184,7 +184,7 @@ body {
     align-items: center;
 }
 
-h2 {
+h2[b-ergxw130q0] {
     text-align: center; /* Yazıyı ortala */
     margin: auto;
     font-size: 1.5rem;
@@ -192,7 +192,7 @@ h2 {
     animation: lights 5s 750ms linear infinite;
 }
 
-.container {
+.container[b-ergxw130q0] {
     max-width: 500px;
     margin: auto;
     background: black;
@@ -202,19 +202,19 @@ h2 {
     text-align: center;
 }
 
-label {
+label[b-ergxw130q0] {
     top: 50px;
     display: block;
     margin-bottom: 8px;
     color: #555;
     text-align: left;
 }
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="date"],
-input[type="gender"],
-select {
+input[type="text"][b-ergxw130q0],
+input[type="password"][b-ergxw130q0],
+input[type="email"][b-ergxw130q0],
+input[type="date"][b-ergxw130q0],
+input[type="gender"][b-ergxw130q0],
+select[b-ergxw130q0] {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
@@ -222,21 +222,21 @@ select {
     box-sizing: border-box;
     transition: border-color 0.3s; border-color: #e0e0e0; /* Light color */
 }
-input:focus,
-select:focus {
+input:focus[b-ergxw130q0],
+select:focus[b-ergxw130q0] {
     border-color: #5cb85c;
     outline: none;
 }
-.input {
+.input[b-ergxw130q0] {
     font-size: medium;
 }
 
-.input:focus {
+.input:focus[b-ergxw130q0] {
     border-color: #00bfff;
     outline: none;
 }
 
-button {
+button[b-ergxw130q0] {
     width: 100%;
     padding: 12px;
     background-color: #5cb85c;
@@ -246,40 +246,40 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-button:hover {
+button:hover[b-ergxw130q0] {
     background-color: #4cae4c;
 }
-.link {
+.link[b-ergxw130q0] {
     margin-top: 15px;
     display: block;
     color: #00bfff;
     text-decoration: none;
 }
-.link:hover {
+.link:hover[b-ergxw130q0] {
     text-decoration: underline;
 }
 
-.message,
-.signin {
+.message[b-ergxw130q0],
+.signin[b-ergxw130q0] {
     top: auto;
     font-size: 14.5px;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.signin {
+.signin[b-ergxw130q0] {
     text-align: center;
 }
 
-.signin a:hover {
+.signin a:hover[b-ergxw130q0] {
     text-decoration: underline royalblue;
 }
 
-.signin a {
+.signin a[b-ergxw130q0] {
     color: #00bfff;
 }
 
 
-.submit {
+.submit[b-ergxw130q0] {
     border: none;
     outline: none;
     padding: 10px;
@@ -289,11 +289,11 @@ button:hover {
     background-color: #00bfff;
 }
 
-.submit:hover {
+.submit:hover[b-ergxw130q0] {
     background-color: #00bfff96;
 }
 
-.submit {
+.submit[b-ergxw130q0] {
     background-color: #00bfff;
     color: white;
     padding: 10px;
@@ -303,11 +303,11 @@ button:hover {
     transition: background-color 0.3s;
 }
 
-.submit:hover {
+.submit:hover[b-ergxw130q0] {
     background-color: #0056b3;
 }
 
-.login-button {
+.login-button[b-ergxw130q0] {
     background-color: #28a745; /* Giriş yap butonu yeşil */
     color: white;
     padding: 10px;
@@ -319,28 +319,28 @@ button:hover {
     margin-top: 10px; /* Üstten boşluk */
 }
 
-.login-button:hover {
+.login-button:hover[b-ergxw130q0] {
     background-color: #218838; /* Hover durumu */
 }
 
 
-.message {
+.message[b-ergxw130q0] {
     text-align: center;
     margin-bottom: 20px;
     color: #555;
 }
 
-.signin {
+.signin[b-ergxw130q0] {
     text-align: center;
     margin-top: 20px;
 }
 
-.link {
+.link[b-ergxw130q0] {
     color: #007bff;
     text-decoration: none;
 }
 
-.link:hover {
+.link:hover[b-ergxw130q0] {
     text-decoration: underline;
 }
      

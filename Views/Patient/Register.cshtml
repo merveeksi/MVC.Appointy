@@ -3,51 +3,52 @@
 @{
     ViewData["Title"] = "Kayıt Ol";
 }
-
+<div>
+<p style="text-align: center">
+    Giray Hastanesi
+    <span>
+        Şimdi kaydolun
+    </span>
+    &mdash; Uygulamamıza Tam Erişim Sağlayın &mdash;
+</p>
+</div>
+<div>
 <form class="form">
     <p class="title">Kayıt Ol</p>
-    <p class="message">Şimdi kaydolun ve uygulamamıza tam erişim sağlayın.</p>
+
     <div class="flex">
         <label>
-            <input class="input" type="text" placeholder="" required="">
-            <span>Adı</span>
+            <input class="input" type="text" placeholder="Adınızı girin" required>
         </label>
-
+    
         <label>
-            <input class="input" type="text" placeholder="" required="">
-            <span>Soyadı</span>
+            <input class="input" type="text" placeholder="Soyadınızı girin" required>
         </label>
     </div>
     <label>
-        <input class="input" type="tcKimlikNo" placeholder="" required="">
-        <span>T.C. Kimlik No</span>
+        <input class="input" type="text" placeholder="T.C. Kimlik No" required>
     </label>
     <div>
-        <label for="Gender">Cinsiyet:</label>
-        <select id="Gender" name="Gender" required>
-            <option value="">Seçiniz</option>
+        <select class="input" type="gender">
+            <option value="">Cinsiyetinizi Seçiniz</option>
             <option value="Male">Erkek</option>
             <option value="Female">Kadın</option>
-            <option value="Other">Diğer</option>
         </select>
     </div>
     <label>
-        <input class="input" type="date" placeholder="" required="">
-        <span>Doğum Tarihi</span>
+        <input class="input" type="date" required>
     </label>
     <label>
-        <input class="input" type="email" placeholder="" required="">
-        <span>E-Posta</span>
+        <input class="input" type="email" placeholder="E-posta adresinizi girin" required>
     </label>
-
+    
     <label>
-        <input class="input" type="password" placeholder="" required="">
-        <span>Şifre</span>
+        <input class="input" type="password" placeholder="Şifrenizi girin" required>
     </label>
     <label>
-        <input class="input" type="password" placeholder="" required="">
-        <span>Şifre Tekrar</span>
+        <input class="input" type="password" placeholder="Şifrenizi tekrar girin" required>
     </label>
     <button class="submit">KAYIT OL</button>
-    <p class="signin">Zaten hesabınız var mı? Giriş yapın.<a class="link" asp-area="" asp-controller="Patient" asp-action="Login">GİRİŞ YAP</a> </p>
+        <p class="signin">Zaten hesabınız var mı? <a class="link" asp-area="" asp-controller="Patient" asp-action="Login">Giriş yapın</a></p>
 </form>
+</div>

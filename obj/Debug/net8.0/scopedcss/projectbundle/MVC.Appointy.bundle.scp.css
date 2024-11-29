@@ -486,142 +486,73 @@ body[b-zuk6j4em62] {
   
   
 /* _content/MVC.Appointy/Views/Patient/Register.cshtml.rz.scp.css */
+body[b-ergxw130q0] { font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0 }
 
-body[b-ergxw130q0] {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    margin: 0;
-    padding: 20px;
+p[b-ergxw130q0] {
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	position: absolute;
+	top: 10%; 
+	left: 50%;
+	width: 40em;
+	margin: 0 0 0 -20em;
+  
+  span {
+  	font: 700 1.2em/1 "Oswald", sans-serif; 
+  	letter-spacing: 0;
+  	padding: .0005em 0 .0005em; 
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+	  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
 }
-.container[b-ergxw130q0] {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
 }
-h2[b-ergxw130q0] {
-    color: #333;
-    margin-bottom: 20px;
-}
-label[b-ergxw130q0] {
-    display: block;
-    margin-bottom: 8px;
-    color: #555;
-    text-align: left;
-}
-input[type="text"][b-ergxw130q0],
-input[type="password"][b-ergxw130q0],
-input[type="email"][b-ergxw130q0],
-input[type="date"][b-ergxw130q0],
-select[b-ergxw130q0] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
-}
-input:focus[b-ergxw130q0],
-select:focus[b-ergxw130q0] {
-    border-color: #5cb85c;
-    outline: none;
-}
-button[b-ergxw130q0] {
-    width: 100%;
-    padding: 12px;
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-button:hover[b-ergxw130q0] {
-    background-color: #4cae4c;
-}
-.link[b-ergxw130q0] {
-    margin-top: 15px;
-    display: block;
-    color: #007bff;
-    text-decoration: none;
-}
-.link:hover[b-ergxw130q0] {
-    text-decoration: underline;
-}
+
 .form[b-ergxw130q0] {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 350px;
+    max-width: 400px;
+    margin: auto;
     padding: 20px;
     border-radius: 20px;
-    position: relative;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: 1px solid #333;
+    position: absolute; /* Changed from relative to absolute */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    background-color: #000e0c;
+  
+    box-shadow: 0 4px 8px rgba(218, 19, 19, 0.1);
+    animation: scaleIn-b-ergxw130q0 0.5s ease-in-out;
+    border: 2px solid #343a40; /* Dış kısım koyu renk */
 }
-
-.title[b-ergxw130q0] {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    color: #00bfff;
-}
-
-.title[b-ergxw130q0]::before {
-    width: 18px;
-    height: 18px;
-}
-
-.title[b-ergxw130q0]::after {
-    width: 18px;
-    height: 18px;
-    animation: pulse-b-ergxw130q0 1s linear infinite;
-}
-
-.title[b-ergxw130q0]::before,
-.title[b-ergxw130q0]::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 0px;
-    background-color: #00bfff;
-}
-
-.message[b-ergxw130q0],
-.signin[b-ergxw130q0] {
-    font-size: 14.5px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.signin[b-ergxw130q0] {
-    text-align: center;
-}
-
-.signin a:hover[b-ergxw130q0] {
-    text-decoration: underline royalblue;
-}
-
-.signin a[b-ergxw130q0] {
-    color: #00bfff;
-}
-
-.flex[b-ergxw130q0] {
-    display: flex;
-    width: 100%;
-    gap: 6px;
-}
-
 .form label[b-ergxw130q0] {
     position: relative;
 }
@@ -659,25 +590,52 @@ button:hover[b-ergxw130q0] {
     font-weight: 600;
 }
 
-.input[b-ergxw130q0] {
-    font-size: medium;
+.title[b-ergxw130q0] {
+    top: 70px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+    margin-top: 60px;
 }
 
-.submit[b-ergxw130q0] {
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
-    transform: .3s ease;
+.title[b-ergxw130q0]::before {
+    width: 18px;
+    height: 18px;
+}
+
+.title[b-ergxw130q0]::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse-b-ergxw130q0 1s linear infinite;
+}
+
+.title[b-ergxw130q0]::before,
+.title[b-ergxw130q0]::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
     background-color: #00bfff;
 }
-
-.submit:hover[b-ergxw130q0] {
-    background-color: #00bfff96;
+    .title[b-ergxw130q0] {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+.flex[b-ergxw130q0] {
+    display: flex;
+    width: 100%;
+    gap: 6px;
 }
 
+/* Kayıt ol animasyon */
 @keyframes pulse-b-ergxw130q0 {
     from {
         transform: scale(0.9);
@@ -689,6 +647,191 @@ button:hover[b-ergxw130q0] {
         opacity: 0;
     }
 }
+@keyframes scaleIn-b-ergxw130q0 {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}    .input[b-ergxw130q0] {
+         width: 100%;
+         padding: 10px;
+         margin: 10px 0;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         transition: border-color 0.3s;
+     }
+
+body[b-ergxw130q0] {
+    margin: 0;
+    font: 30% / 1.5 Raleway, sans-serif;
+    color: hsl(230, 100%, 95%);
+    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+    height: 100vh;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+h2[b-ergxw130q0] {
+    text-align: center; /* Yazıyı ortala */
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 100;
+    animation: lights 5s 750ms linear infinite;
+}
+
+.container[b-ergxw130q0] {
+    max-width: 500px;
+    margin: auto;
+    background: black;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px #28a745;
+    text-align: center;
+}
+
+label[b-ergxw130q0] {
+    top: 50px;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: left;
+}
+input[type="text"][b-ergxw130q0],
+input[type="password"][b-ergxw130q0],
+input[type="email"][b-ergxw130q0],
+input[type="date"][b-ergxw130q0],
+input[type="gender"][b-ergxw130q0],
+select[b-ergxw130q0] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; border-color: #e0e0e0; /* Light color */
+}
+input:focus[b-ergxw130q0],
+select:focus[b-ergxw130q0] {
+    border-color: #5cb85c;
+    outline: none;
+}
+.input[b-ergxw130q0] {
+    font-size: medium;
+}
+
+.input:focus[b-ergxw130q0] {
+    border-color: #00bfff;
+    outline: none;
+}
+
+button[b-ergxw130q0] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover[b-ergxw130q0] {
+    background-color: #4cae4c;
+}
+.link[b-ergxw130q0] {
+    margin-top: 15px;
+    display: block;
+    color: #00bfff;
+    text-decoration: none;
+}
+.link:hover[b-ergxw130q0] {
+    text-decoration: underline;
+}
+
+.message[b-ergxw130q0],
+.signin[b-ergxw130q0] {
+    top: auto;
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signin[b-ergxw130q0] {
+    text-align: center;
+}
+
+.signin a:hover[b-ergxw130q0] {
+    text-decoration: underline royalblue;
+}
+
+.signin a[b-ergxw130q0] {
+    color: #00bfff;
+}
+
+
+.submit[b-ergxw130q0] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #00bfff;
+}
+
+.submit:hover[b-ergxw130q0] {
+    background-color: #00bfff96;
+}
+
+.submit[b-ergxw130q0] {
+    background-color: #00bfff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit:hover[b-ergxw130q0] {
+    background-color: #0056b3;
+}
+
+.login-button[b-ergxw130q0] {
+    background-color: #28a745; /* Giriş yap butonu yeşil */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block; /* Butonun görünümünü iyileştirmek için */
+    margin-top: 10px; /* Üstten boşluk */
+}
+
+.login-button:hover[b-ergxw130q0] {
+    background-color: #218838; /* Hover durumu */
+}
+
+
+.message[b-ergxw130q0] {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.signin[b-ergxw130q0] {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link[b-ergxw130q0] {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover[b-ergxw130q0] {
+    text-decoration: underline;
+}
+     
 /* _content/MVC.Appointy/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
