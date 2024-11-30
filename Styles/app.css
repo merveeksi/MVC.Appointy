@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
     font-size: 14px;
     position: relative;
@@ -63,9 +62,8 @@ body {
     overflow: hidden;
 }
 
-
 .container .slide .item {
-    width: 200px;
+    width: 100px; /* Genişlik yarıya indirildi */
     height: 300px;
     position: absolute;
     top: 50%;
@@ -91,27 +89,27 @@ body {
 .slide .item:nth-child(2) .content { display: block; }
 
 .slide .item:nth-child(3) {
-    left: 60%;
+    left: 30%; /* Genişlik yarıya indirildi */
 }
 
 .slide .item:nth-child(4) {
-    left: calc(60% + 220px);
+    left: calc(30% + 220px); /* Genişlik yarıya indirildi */
 }
 
 .slide .item:nth-child(5) {
-    left: calc(60% + 440px);
+    left: calc(30% + 440px); /* Genişlik yarıya indirildi */
 }
 
 .slide .item:nth-child(n + 6) {
-    left: calc(60% + 440px);
+    left: calc(30% + 440px); /* Genişlik yarıya indirildi */
     overflow: hidden;
 }
 
 .item .content {
     position: absolute;
     top: 50%;
-    left: 100px;
-    width: 300px;
+    left: 50px; /* Genişlik yarıya indirildi */
+    width: 150px; /* Genişlik yarıya indirildi */
     text-align: left;
     color: #eee;
     transform: translate(0, -50%);
@@ -235,6 +233,6 @@ body::-webkit-scrollbar-track {
     background: #f0f0f0;
 }
 
+/*Appointment Create Write "Book Appointment"*/
 
-
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");

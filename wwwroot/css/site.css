@@ -2598,10 +2598,6 @@ details.collapse summary::-webkit-details-marker {
   border-top-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
 }
 
-.textarea-bordered {
-  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
-}
-
 .textarea:focus {
   box-shadow: none;
   border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
@@ -2956,6 +2952,10 @@ details.collapse summary::-webkit-details-marker {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .inset-0 {
   inset: 0px;
 }
@@ -3216,10 +3216,6 @@ details.collapse summary::-webkit-details-marker {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .resize {
   resize: both;
 }
@@ -3316,6 +3312,10 @@ details.collapse summary::-webkit-details-marker {
   border-radius: 0.375rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -3377,9 +3377,9 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
-.bg-indigo-600 {
+.bg-green-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
@@ -3658,14 +3658,30 @@ details.collapse summary::-webkit-details-marker {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ease-out {
@@ -3747,7 +3763,8 @@ body {
 }
 
 .container .slide .item {
-  width: 200px;
+  width: 100px;
+  /* Genişlik yarıya indirildi */
   height: 300px;
   position: absolute;
   top: 50%;
@@ -3775,27 +3792,33 @@ body {
 }
 
 .slide .item:nth-child(3) {
-  left: 60%;
+  left: 30%;
+  /* Genişlik yarıya indirildi */
 }
 
 .slide .item:nth-child(4) {
-  left: calc(60% + 220px);
+  left: calc(30% + 220px);
+  /* Genişlik yarıya indirildi */
 }
 
 .slide .item:nth-child(5) {
-  left: calc(60% + 440px);
+  left: calc(30% + 440px);
+  /* Genişlik yarıya indirildi */
 }
 
 .slide .item:nth-child(n + 6) {
-  left: calc(60% + 440px);
+  left: calc(30% + 440px);
+  /* Genişlik yarıya indirildi */
   overflow: hidden;
 }
 
 .item .content {
   position: absolute;
   top: 50%;
-  left: 100px;
-  width: 300px;
+  left: 50px;
+  /* Genişlik yarıya indirildi */
+  width: 150px;
+  /* Genişlik yarıya indirildi */
   text-align: left;
   color: #eee;
   transform: translate(0, -50%);
@@ -3938,6 +3961,14 @@ body::-webkit-scrollbar-track {
   background: #f0f0f0;
 }
 
+/*Appointment Create Write "Book Appointment"*/
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
@@ -4021,7 +4052,3 @@ body::-webkit-scrollbar-track {
     padding-right: 2rem;
   }
 }
-
-
-
-

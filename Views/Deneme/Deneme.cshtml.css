@@ -1,113 +1,177 @@
+.form-basin { 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    padding: 40px 20px; 
+    font-size: 16px; 
+    font-weight: 400; 
+    background-color: transparent; 
+} 
 
-p {
-	
+.form-basin form { 
+    margin: auto; 
+    max-width: 600px; 
+} 
 
-span {
-        font: 700 1.2em/1 "Oswald", sans-serif; 
-        letter-spacing: 0;
-        padding: .0005em 0 .0005em; 
-        display: block;
-        margin: 0 auto;
-        text-shadow: 0 0 80px rgba(255,255,255,.5);
+.form-basin label { 
+    display: block; 
+    margin-bottom: 8px; 
+} 
 
-        /* Clip Background Image */
+.form-basin input, 
+.form-basin textarea, 
+.form-basin select { 
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 16px; 
+    font-family: inherit; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    transition: border-color 0.3s; 
+} 
 
-        background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-        -webkit-background-clip: text;
-        background-clip: text;
+.form-basin input:focus, 
+.form-basin textarea:focus, 
+.form-basin select:focus { 
+    border-color: #007bff; 
+    outline: none; 
+} 
 
-        /* Animate Background Image */
+.form-basin button { 
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: 500; 
+    letter-spacing: 1px; 
+    transition: background-color 0.3s; 
+} 
 
-        -webkit-text-fill-color: transparent;
-        -webkit-animation: aitf 80s linear infinite;
+.form-basin button:hover { 
+    filter: brightness(85%); 
+} 
 
-        /* Activate hardware acceleration for smoother animations */
+.form-basin ::placeholder { 
+    font-family: inherit; 
+    opacity: 0.7; 
+} 
 
-        -webkit-transform: translate3d(0,0,0);
-        -webkit-backface-visibility: hidden;
-    }
+.form-basin input[type='checkbox'] { 
+    margin-right: 8px; 
+    width: auto; 
+} 
 
-}
-/* Animate Background Image */
+.form-basin fieldset { 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin-bottom: 16px; 
+    border-radius: 4px; 
+} 
 
-@-webkit-keyframes aitf {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
+.form-basin legend { 
+    padding: 0 10px; 
+    font-weight: bold; 
+    font-size: 1em; 
+} 
 
+.form-basin input[type='radio'] { 
+    margin-right: 8px; 
+    margin-top: 4px; 
+    width: auto; 
+    cursor: pointer; 
+} 
 
-.form {
+.form-basin .radio-label { 
+    display: inline-block; 
+    margin-right: 15px; 
+    cursor: pointer; 
+} 
+
+.form-basin .radio-group { 
+    margin-bottom: 16px; 
+} 
+
+.form-basin .donation-type { 
+    margin-bottom: 16px; 
+} 
+
+.form-basin .donation-type span { 
+    font-weight: 500; 
+    margin-right: 10px; 
+} 
+
+.form-basin input[type='number'] { 
+    -webkit-appearance: textfield; 
+    -moz-appearance: textfield; 
+    appearance: textfield; 
+} 
+
+.form-basin input[type='number']::-webkit-inner-spin-button, 
+.form-basin input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+} 
+
+.form-basin .form-check { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 16px; 
+} 
+
+.form-basin .form-check-input { 
+    margin-top: 14px; 
+    margin-right: 10px; 
+    cursor: pointer; 
+} 
+
+.form-basin .form-check-label { 
+    margin-bottom: 0; 
+    cursor: pointer; 
+} 
+.popup {
+    right: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: pulse 2s infinite;
+    transition: right 0.5s ease;
+  }
+  .popup-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    animation: scaleIn 0.5s ease-in-out;
-}
-
-.title {
-	font-size: 1.5rem;
-	font-weight: 600;
-	letter-spacing: -1px;
-	position: relative;
-	display: flex;
-	align-items: center;
-	padding-left: 30px;
-	color: #00bfff;
-	margin-bottom: 20px;
-}
-
-.title::before {
-    width: 18px;
-    height: 18px;
-}
-
-.title::after {
-    width: 18px;
-    height: 18px;
-    animation: pulse 1s linear infinite;
-}
-
-.title::before,
-.title::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 0px;
-    background-color: #00bfff;
-}
-.flex {
-    display: flex;
-    width: 100%;
-    gap: 6px;
-}
-
-/* Kayıt ol animasyon */
-@keyframes pulse {
-    from {
-        transform: scale(0.9);
-        opacity: 1;
-    }
-
-    to {
-        transform: scale(1.8);
-        opacity: 0;
-    }
-}
-@keyframes scaleIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}    .input {
-         width: 100%;
-         padding: 10px;
-         margin: 10px 0;
-         border: 1px solid #ccc;
-         border-radius: 4px;
-         transition: border-color 0.3s;
-     }
-  
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .social-icons a {
+    margin: 10px 0;
+    display: block;
+  }
+  .social-icons i {
+    font-size: 24px;
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+  .social-icons i:hover {
+    transform: scale(1.1);
+  }
+  .paused {
+    animation-play-state: paused;
+  }
+  .popup.sticky {
+    position: fixed;
+    top: 50%;
+    top: calc(50% - 100px);
+    right: 0;
+    width: 50px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }

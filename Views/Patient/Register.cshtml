@@ -3,52 +3,51 @@
 @{
     ViewData["Title"] = "Kayıt Ol";
 }
-<div>
-<p style="text-align: center">
-    Giray Hastanesi
-    <span>
-        Şimdi kaydolun
-    </span>
-    &mdash; Uygulamamıza Tam Erişim Sağlayın &mdash;
-</p>
-</div>
-<div>
-<form class="form">
-    <p class="title">Kayıt Ol</p>
-
-    <div class="flex">
-        <label>
-            <input class="input" type="text" placeholder="Adınızı girin" required>
-        </label>
-    
-        <label>
-            <input class="input" type="text" placeholder="Soyadınızı girin" required>
-        </label>
-    </div>
-    <label>
-        <input class="input" type="text" placeholder="T.C. Kimlik No" required>
-    </label>
-    <div>
-        <select class="input" type="gender">
-            <option value="">Cinsiyetinizi Seçiniz</option>
-            <option value="Male">Erkek</option>
-            <option value="Female">Kadın</option>
-        </select>
-    </div>
-    <label>
-        <input class="input" type="date" required>
-    </label>
-    <label>
-        <input class="input" type="email" placeholder="E-posta adresinizi girin" required>
-    </label>
-    
-    <label>
-        <input class="input" type="password" placeholder="Şifrenizi girin" required>
-    </label>
-    <label>
-        <input class="input" type="password" placeholder="Şifrenizi tekrar girin" required>
-    </label>
-    <button class="submit">KAYIT OL</button>
-        <p class="signin">Zaten hesabınız var mı? <a class="link" asp-area="" asp-controller="Patient" asp-action="Login">Giriş yapın</a></p>
-</form>
+<div class="h-screen md:flex" style="height: 780px;">
+	<div class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 justify-around items-center hidden">
+		<div>
+			<p class="animated-text" style="margin-top: 40px;">
+				Giray Hastanesi
+				<span class="highlighted-text">Şimdi kaydolun</span>
+				&mdash; Uygulamamıza Tam Erişim Sağlayın &mdash;
+			</p>
+		</div>
+		<!-- Çemberler -->
+		<div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+		<div class="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+		<div class="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+		<div class="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+	</div>
+	<div class="flex md:w-1/2 justify-center py-10 items-center bg-white">
+		<form class="form">
+			<p class="title">Kayıt Ol!</p>
+			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4" style="width: 400px;">
+				<input class="pl-2 outline-none border-none w-full" type="text" name="" id="" placeholder="Adınız..." />
+			</div>
+			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+				<input class="pl-2 outline-none border-none w-full" type="text" name="" id="" placeholder="Soyadınız..." />
+			</div>
+			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+				<input class="pl-2 outline-none border-none w-full" type="text" name="" id="" placeholder="T.C. Kimlik No..." />
+			</div>
+			<div>
+				<select class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 w-full" type="text">
+					<option value="">Cinsiyetiniz...</option>
+					<option value="Male">Erkek</option>
+					<option value="Female">Kadın</option>
+				</select>
+			</div>
+			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 w-full">
+				<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="E-Posta..." />
+			</div>
+			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 w-full">
+				<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Şifre..." />
+			</div>
+			<div class="flex items-center border-2 py-2 px-3 rounded-2xl w-full">
+				<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Tekrar şifre..." />
+			</div>
+			<button type="submit" class="block w-full bg-green-500 mt-4 py-2 rounded-2xl text-white font-semibold mb-2 w-full">Kayıt Ol</button>
+			<span class="signin">Zaten hesabınız var mı? <a class="link" style="color: #00b3f0" asp-area="" asp-controller="Patient" asp-action="Login">Giriş yapın</a></span>
+		</form>
+	</div>
 </div>

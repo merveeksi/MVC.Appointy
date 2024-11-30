@@ -4,25 +4,49 @@
 ViewData["Title"] = "Appointment Create";
 }
 
-<div class="container">
-    <form method="form" asp-action="Create" asp-controller="Appointment" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <input type="hidden" name="PatientId" value="@Model.PatientId" />
-        <input type="hidden" name="DoctorId" value="@Model.DoctorId" />
-        <p class="title">Randevu Oluştur</p>
-        <div class="mb-4">
-            <label for="AppointmentDate" class="block text-gray-700 text-sm font-bold mb-2">Randevu Tarihini Seçiniz:</label>
-            <input type="date" id="AppointmentDate" name="AppointmentDate" required class="input input-bordered w-full" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+<<div class="aurora-content">
+    <h1 class="aurora-title">
+        RANDEVU OLUŞTUR
+        <div class="aurora-animation">
+            <div class="aurora-item"></div>
+            <div class="aurora-item"></div>
+            <div class="aurora-item"></div>
+            <div class="aurora-item"></div>
         </div>
-        <div class="mb-4">
-            <label for="AppointmentTime" class="block text-gray-700 text-sm font-bold mb-2">Randevu Saatini Seçiniz:</label>
-        <div class="flex">
-            <select id="AppointmentHour" name="AppointmentHour" required class="input input-bordered w-1/2 mr-2">
+    </h1>
+</div>
+<div class="form-basin" style="margin-top: 20px;"> <!-- Added margin-top to shift down -->
+    <form action="" method="POST">
+        <label for="doctorSelect">Doktor Seçiniz:</label>
+        <select class="hover:scale-105 transition duration-300 ease-in-out shadow-lg p-4 rounded-xl bg-white" id="doctorSelect" name="doctorId" required style="border-radius: 8px;">
+            <option value="">Seçiniz...</option>
+            <!-- Example options, replace with actual doctor data -->
+            <option value="1">Dr. Ahmet Yılmaz</option>
+            <option value="2">Dr. Ayşe Demir</option>
+            <option value="3">Dr. Mehmet Can</option>
+        </select>
+
+        <label for="clinicSelect">Klinik Seçiniz:</label>
+        <select class="hover:scale-105 transition duration-300 ease-in-out shadow-lg p-4 rounded-xl bg-white" id="clinicSelect" name="clinicId" required style="border-radius: 8px;">
+            <option value="">Seçiniz...</option>
+            <!-- Example options, replace with actual clinic data -->
+            <option value="1">Dahiliye</option>
+            <option value="2">KBB</option>
+            <option value="3">Diş</option>
+        </select>
+
+        <label for="appointmentDate">Randevu Tarihini Seçiniz:</label>
+        <input class="hover:scale-105 transition duration-300 ease-in-out shadow-lg p-4 rounded-xl bg-white" type="date" id="appointmentDate" name="appointmentDate" min="@DateTime.Now.ToString("yyyy-MM-dd")" style="border-radius: 8px;">
+
+        <label for="appointmentTime">Randevu Saatini Seçiniz:</label>
+        <div style="display: flex; gap: 10px;">
+            <select class="hover:scale-105 transition duration-300 ease-in-out shadow-lg p-4 rounded-xl bg-white" id="appointmentHour" name="appointmentHour" style="border-radius: 8px;">
                 @for (int hour = 8; hour < 17; hour++)
                 {
                     <option value="@hour.ToString("D2")">@hour.ToString("D2")</option>
                 }
             </select>
-            <select id="AppointmentMinute" name="AppointmentMinute" required class="input input-bordered w-1/2">
+            <select class="hover:scale-105 transition duration-300 ease-in-out shadow-lg p-4 rounded-xl bg-white" id="appointmentMinute" name="appointmentMinute" style="border-radius: 8px;">
                 @for (int minute = 0; minute < 60; minute += 15)
                 {
                     if (minute == 0 && DateTime.Now.Hour == 12) continue;
@@ -32,51 +56,22 @@ ViewData["Title"] = "Appointment Create";
                     <option value="@minute.ToString("D2")">@minute.ToString("D2")</option>
                 }
             </select>
+        </div>
+        
+        <label for="notes">Not:</label>
+        <textarea class="hover:scale-105 transition duration-300 ease-in-out shadow-lg p-4 rounded-xl bg-white" id="notes" name="notes" placeholder="Notlar için buraya yazınız..." style="border-radius: 8px;"></textarea>
+
+        <button class="hover:scale-105 transition duration-300 ease-in-out shadow-lg p-4 rounded-xl bg-white" type="submit">Randevu Oluştur</button>
+    </form>
+    <div id="popup" class="popup sticky">
+        <div class="popup-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
-        <div class="mb-4">
-            <textarea placeholder="Notlar için buraya yazınız..." id="notes" name="notes" class="textarea textarea-bordered w-full"></textarea>
-        </div>
-        <button class="btn" type="submit">Randevu Al</button>
-    </form>
-  </div>
-  
-
-@* <div class="container mx-auto p-4"> *@
-@*     <h2 class="text-2xl font-semibold mb-4">Randevu Oluştur</h2> *@
-@*     <form method="post" asp-action="Create" asp-controller="Appointment" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"> *@
-@*         <input type="hidden" name="PatientId" value="@Model.PatientId" /> *@
-@*         <input type="hidden" name="DoctorId" value="@Model.DoctorId" /> *@
-@*         <div class="mb-4"> *@
-@*             <label for="AppointmentDate" class="block text-gray-700 text-sm font-bold mb-2">Randevu Tarihini Seçiniz:</label> *@
-@*             <input type="date" id="AppointmentDate" name="AppointmentDate" required class="input input-bordered w-full" min="@DateTime.Now.ToString("yyyy-MM-dd")" /> *@
-@*         </div> *@
-        @* <div class="mb-4"> *@
-        @*     <label for="AppointmentTime" class="block text-gray-700 text-sm font-bold mb-2">Randevu Saatini Seçiniz:</label> *@
-        @*     <div class="flex"> *@
-        @*         <select id="AppointmentHour" name="AppointmentHour" required class="input input-bordered w-1/2 mr-2"> *@
-        @*             @for (int hour = 8; hour < 17; hour++) *@
-        @*             { *@
-        @*                 <option value="@hour.ToString("D2")">@hour.ToString("D2")</option> *@
-        @*             } *@
-        @*         </select> *@
-        @*         <select id="AppointmentMinute" name="AppointmentMinute" required class="input input-bordered w-1/2"> *@
-        @*             @for (int minute = 0; minute < 60; minute += 15) *@
-        @*             { *@
-        @*                 if (minute == 0 && DateTime.Now.Hour == 12) continue; *@
-        @*                 if (minute == 15 && DateTime.Now.Hour == 12) continue; *@
-        @*                 if (minute == 30 && DateTime.Now.Hour == 12) continue; *@
-        @*                 if (minute == 45 && DateTime.Now.Hour == 12) continue; *@
-        @*                 <option value="@minute.ToString("D2")">@minute.ToString("D2")</option> *@
-        @*             } *@
-        @*         </select> *@
-        @*     </div> *@
-        @* </div> *@
-@*         <div class="mb-4"> *@
-@*             <textarea id="notes" name="notes" placeholder="Notlar için buraya yazınız..." class="textarea textarea-bordered w-full"></textarea> *@
-@*         </div> *@
-@*         <div> *@
-@*             <button type="submit" class="btn btn-primary w-full">Randevu Al</button> *@
-@*         </div> *@
-@*     </form> *@
-@* </div> *@
+    </div>
+    <script src="script.js"></script>
+</div>
