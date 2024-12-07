@@ -17,6 +17,11 @@
         },
         "runtime": {
           "MVC.Appointy.dll": {}
+        },
+        "resources": {
+          "en/MVC.Appointy.resources.dll": {
+            "locale": "en"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {

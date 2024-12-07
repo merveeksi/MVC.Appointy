@@ -119,3 +119,8 @@
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.genruntimeconfig.cache
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/ref/MVC.Appointy.dll
 /Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/scopedcss/Views/Deneme/Deneme.cshtml.rz.scp.css
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.csproj.GenerateResource.cache
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/bin/Debug/net8.0/en/MVC.Appointy.resources.dll
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/MVC.Appointy.Resources.HomeController.en.resources
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/en/MVC.Appointy.resources.cs
+/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/en/MVC.Appointy.resources.dll

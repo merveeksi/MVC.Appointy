@@ -1,8 +1,20 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using MVC.Appointy.Data;
 using MVC.Appointy.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Localization
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[] {"tr", "en", "de", "it", "zh" };
+    options.SetDefaultCulture("tr");
+    options.AddSupportedCultures(supportedCultures);
+    options.AddSupportedUICultures(supportedCultures);
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -13,6 +25,10 @@ builder.Services.AddDbContext<AppointyDbContext>(options =>
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 
 var app = builder.Build();
+
+// Localization middleware
+var localizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>()!.Value;
+app.UseRequestLocalization(localizationOptions);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

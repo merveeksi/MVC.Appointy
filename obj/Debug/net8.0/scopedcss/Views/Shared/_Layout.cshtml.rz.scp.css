@@ -126,4 +126,22 @@ footer[b-ad7mh9sz5y] {
     color: white; /* Footer yazı rengi */
     text-align: center; /* Footer yazı hizalaması */
     padding: 10px 0; /* Footer iç boşluk */
+    margin-top: auto; /* Footer'ı en alta sabitle */
 }
+    /* Dropdown menüsünü konumlandırmak için */
+    #language-dropdown-menu[b-ad7mh9sz5y] {
+        position: absolute; /* Navbar'dan bağımsız konumlandır */
+        z-index: 10; /* Diğer öğelerin üstünde görünmesi için */
+    }
+
+    /* Dropdown menüsündeki yazı stili */
+    #language-dropdown-menu a[b-ad7mh9sz5y] {
+        color: white; /* Yazı rengini beyaz yap */
+        font-weight: bold; /* Yazıyı kalın yap */
+    }
+
+    /* Butondaki yazı stili */
+    .language-button[b-ad7mh9sz5y] {
+        color: white; /* Yazı rengini beyaz yap */
+        font-weight: bold; /* Yazıyı kalın yap */
+    }
