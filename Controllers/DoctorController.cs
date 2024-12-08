@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MVC.Appointy.Data;
 using MVC.Appointy.Models;
 
@@ -45,28 +46,15 @@ public class DoctorController : Controller
         // return View(objDoctorList);
         return View();
     }
-//
-//     // Müsait günleri döndüren metod
-//     private List<DateTime> GetAvailableDates(int doctorId)
-//     {
-//         // Burada doktorun randevu almadığı günleri kontrol edin
-//         var appointments = _db.Appointments
-//             .Where(a => a.DoctorId == doctorId)
-//             .Select(a => a.AppointmentDate)
-//             .ToList();
-//
-//         // Örnek olarak, 1 hafta boyunca her gün için müsait günleri döndür
-//         List<DateTime> availableDates = new List<DateTime>();
-//         DateTime startDate = DateTime.Today;
-//         for (int i = 0; i < 7; i++)
-//         {
-//             DateTime date = startDate.AddDays(i);
-//             if (!appointments.Contains(date))
-//             {
-//                 availableDates.Add(date);
-//             }
-//         }
-//         return availableDates;
-//     }
-// }
+
+    [HttpPost]
+    public IActionResult GetAppointments(DateTime date, int doctorId)
+    {
+        var appointments = _db.Appointments
+            .Where(a => a.AppointmentDate.Date == date.Date && a.DoctorId == doctorId)
+            .Include(a => a.Patient) // Hasta bilgilerini dahil et
+            .ToList();
+
+        return View("DoctorPanel", appointments); // Randevuları DoctorPanel.cshtml'e gönder
+    }
 }

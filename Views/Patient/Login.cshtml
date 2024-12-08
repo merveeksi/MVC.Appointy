@@ -3,57 +3,20 @@
     ViewData["Title"] = "Giriş Yap";
 }
 
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="800px" height="600px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="174.7899" y1="186.34" x2="330.1259" y2="186.34" gradientTransform="matrix(0.8538 0.5206 -0.5206 0.8538 147.9521 -79.1468)">
-  <stop  offset="0" style="stop-color:#FFC035"/>
-  <stop  offset="0.221" style="stop-color:#F9A639"/>
-  <stop  offset="1" style="stop-color:#E64F48"/>
-</linearGradient>
-  <circle fill="url(#SVGID_1_)" cx="266.498" cy="211.378" r="77.668"/>
-  <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="290.551" y1="282.9592" x2="485.449" y2="282.9592">
-    <stop  offset="0" style="stop-color:#FFA33A"/>
-    <stop  offset="0.0992" style="stop-color:#E4A544"/>
-    <stop  offset="0.9624" style="stop-color:#00B59C"/>
-  </linearGradient>
-  <circle fill="url(#SVGID_2_)" cx="388" cy="282.959" r="97.449"/>
-  <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="180.3469" y1="362.2723" x2="249.7487" y2="362.2723">
-    <stop  offset="0" style="stop-color:#12B3D6"/>
-    <stop  offset="1" style="stop-color:#7853A8"/>
-  </linearGradient>
-  <circle fill="url(#SVGID_3_)" cx="215.048" cy="362.272" r="34.701"/>
-  <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="367.3469" y1="375.3673" x2="596.9388" y2="375.3673">
-    <stop  offset="0" style="stop-color:#12B3D6"/>
-    <stop  offset="1" style="stop-color:#7853A8"/>
-  </linearGradient>
-  <circle fill="url(#SVGID_4_)" cx="482.143" cy="375.367" r="114.796"/>
-  <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="365.4405" y1="172.8044" x2="492.4478" y2="172.8044" gradientTransform="matrix(0.8954 0.4453 -0.4453 0.8954 127.9825 -160.7537)">
-    <stop  offset="0" style="stop-color:#FFA33A"/>
-    <stop  offset="1" style="stop-color:#DF3D8E"/>
-  </linearGradient>
-  <circle fill="url(#SVGID_5_)" cx="435.095" cy="184.986" r="63.504"/>
-</svg>
 <div class="container">
-  <h2>Hasta Girişi</h2>
-  <form>
-    <input type="text" class="email" placeholder="E-Posta">
+    <h2>Hasta Girişi</h2>
+    <form method="post" asp-action="Login" asp-controller="Patient">
+        <input type="text" class="email" name="Email" placeholder="E-Posta" required>
+        <br/>
+        <input type="password" class="pwd" name="Password" placeholder="Şifre" required>
+        <br/>
+        <button type="submit" class="signin">Giriş Yap</button>
+    </form>
+    <a href="#" class="link">Şifremi Unuttum?</a>
     <br/>
-    <input type="text" class="pwd" placeholder="Şifre">
-  </form>
-  <a href="#" class="link">
-    Şifremi Unuttum?
-  </a>
-  <br/>
-  <button class="register">
-    <a class="" asp-area="" asp-controller="Patient" asp-action="Register">Kayıt Ol</a>
-  </button>
-  <button class="signin">
-    <a class="" asp-area="" asp-controller="Patient" asp-action="PatientPanel">Giriş Yap</a>
-  </button>
-  <h3>your registration is complete !</h3>
-  <h3>your sign in is complete !</h3>
-  <div class="reg"></div>
-  <div class="sig"></div>
+    <button class="register">
+        <a asp-controller="Patient" asp-action="Register">Kayıt Ol</a>
+    </button>
 </div>
 
 <script>
@@ -103,36 +66,3 @@
   });
 
 </script>
-
-@* <div class="container"> *@
-@*     <div class="heading">Hasta Girişi</div> *@
-@*     <form action="" class="form"> *@
-@*       <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail"> *@
-@*       <input required="" class="input" type="password" name="password" id="password" placeholder="Password"> *@
-@*       <span class="forgot-password"><a href="#">Şifremi Unuttum ?</a></span> *@
-@*       <input class="login-button" type="submit" value="Sign In"> *@
-@*     </form> *@
-@* <div class="social-account-container"> *@
-@*   <span class="title">veya</span> *@
-@*   <div class="social-accounts"> *@
-@*     <button class="social-button google"> *@
-@*       <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 488 512"> *@
-@*         <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path> *@
-@*       </svg></button> *@
-@*     <button class="social-button apple"> *@
-@*       <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"> *@
-@*         <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path> *@
-@*       </svg> *@
-@*     </button> *@
-@*     <button class="social-button twitter"> *@
-@*       <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"> *@
-@*         <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path> *@
-@*       </svg> *@
-@*     </button> *@
-@*   </div> *@
-@* </div> *@
-@* <br/> *@
-@* <div class="text-center"> *@
-@*   <a class="link link-primary" asp-area="" asp-controller="Patient" asp-action="Register"></a> *@
-@* </div> *@
-@* </div> *@

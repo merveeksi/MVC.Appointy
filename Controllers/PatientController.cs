@@ -29,7 +29,7 @@ public class PatientController : Controller
             Appointments = _db.Appointments.Where(a => a.PatientId == firstPatient.Id).ToList(),
             NewAppointment = new Appointment()
         };
-        return View();
+        return View(model);
     }
 
     // POST: /Patient/PatientPanel
@@ -79,9 +79,9 @@ public class PatientController : Controller
         var patientInDb = _db.Patients.FirstOrDefault(p => p.Tc == patient.Tc && p.Password == patient.Password);
         if (patientInDb == null)
         {
-            ModelState.AddModelError("LoginFailed", "Login failed. Please check your credentials.");
+            ModelState.AddModelError("LoginFailed", "Giriş başarısız. Lütfen kimlik bilgilerinizi kontrol edin.");
             return View(patient);
         }
-        return RedirectToAction("PatientPanel");
+        return RedirectToAction("PatientPanel", "Patient");
     }
 }
