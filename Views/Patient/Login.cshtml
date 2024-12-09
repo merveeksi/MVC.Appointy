@@ -3,66 +3,240 @@
     ViewData["Title"] = "Giriş Yap";
 }
 
-<div class="container">
-    <h2>Hasta Girişi</h2>
-    <form method="post" asp-action="Login" asp-controller="Patient">
-        <input type="text" class="email" name="Email" placeholder="E-Posta" required>
-        <br/>
-        <input type="password" class="pwd" name="Password" placeholder="Şifre" required>
-        <br/>
-        <button type="submit" class="signin">Giriş Yap</button>
-    </form>
-    <a href="#" class="link">Şifremi Unuttum?</a>
-    <br/>
-    <button class="register">
-        <a asp-controller="Patient" asp-action="Register">Kayıt Ol</a>
-    </button>
+
+<div class="min-h-[calc(80vh-100px)] flex items-center justify-center bg-gradient-to-b from-green-50 to-green-100 py-8 w-full">
+    <div class="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800">
+                <i class="fa-solid fa-hospital"></i>
+                Hasta Girişi
+            </h2>
+        </div>
+
+        <form class="space-y-6" method="post" asp-controller="Patient" asp-action="Login">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">E-posta Adresi</label>
+                <div class="mt-1 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-envelope text-gray-400"></i>
+                    </div>
+                    <input id="email" name="Email" type="email" required
+                           class="appearance-none block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                           placeholder="ornek@hastane.com">
+                </div>
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Şifre</label>
+                <div class="mt-1 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-lock text-gray-400"></i>
+                    </div>
+                    <input id="password" name="Password" type="password" required
+                           class="appearance-none block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                           placeholder="••••••••">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                        <button type="button" id="togglePassword" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input id="remember_me" name="remember_me" type="checkbox"
+                           class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                    <label for="remember_me" class="ml-2 block text-sm text-gray-700">
+                        Beni Hatırla
+                    </label>
+                </div>
+                <div class="text-sm">
+                    <a asp-controller="Patient" 
+                       asp-action="ForgotPassword" 
+                       class="font-medium text-green-600 hover:text-green-500">
+                        Şifremi Unuttum
+                    </a>
+                </div>
+            </div>
+
+            <button type="submit"
+                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    <i class="fas fa-sign-in-alt mr-2"></i>
+                    Giriş Yap
+            </button>
+        </form>
+
+        <div class="mt-4 text-center">
+            <p class="text-sm text-gray-600">Hesabın yok mu? <a class="text-green-600 hover:text-green-500" asp-area="" asp-controller="Patient" asp-action="Register">Kayıt ol</a></p>
+        </div>
+
+        <div class="mt-6">
+            <div class="relative">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white text-gray-500">veya</span>
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <a href="/auth/google"
+                   class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    <img class="h-5 w-5 mr-2" src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google logo">
+                    Google ile Giriş Yap
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
-  $(document).ready(() => {
-    /*------- button with class register -------*/
-    let reg_btn = $('.container .register')
+    document.getElementById('togglePassword').addEventListener('click', function() {
+        const passwordInput = document.getElementById('password');
+        const icon = this.querySelector('i');
 
-    /*------- button with class sign in --------*/
-    let sig_btn = $('.container .signin')
-
-    /*------- back button ----------------------*/
-    let back_btn = $('.container .back')
-
-
-    reg_btn.click(function(e){
-      e.preventDefault()
-      $(this).siblings('.reg').css({
-        'transform':'translateY(40%) scale(5)',
-        'border-radius':'0',
-        'width':'100%',
-        'height':'100%'
-      }).end();
-
-
-      reg_btn.siblings('.container h3:nth-of-type(1)').css({
-        'top':'40%',
-        'z-index':'8',
-      }).end().end();
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
     });
 
-    sig_btn.on('click',function(e){
-      e.preventDefault();
-      $(this).siblings('.sig').css({
-        'transform':'translateY(40%) scale(5)',
-        'border-radius':'0',
-        'width':'100%',
-        'height':'100%'
-      }).end();
+    document.addEventListener('DOMContentLoaded', function() {
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const rememberMeCheckbox = document.getElementById('remember_me');
+        const form = document.querySelector('form');
 
+        const savedEmail = localStorage.getItem('rememberedEmail');
+        const savedPassword = localStorage.getItem('rememberedPassword');
+        const isRemembered = localStorage.getItem('isRemembered');
 
-      sig_btn.siblings('.container h3:nth-of-type(2)').css({
-        'top':'40%',
-        'z-index':'8',
-      }).end().end();
+        if (isRemembered === 'true' && savedEmail && savedPassword) {
+            emailInput.value = savedEmail;
+            passwordInput.value = savedPassword;
+            rememberMeCheckbox.checked = true;
+        }
 
+        form.addEventListener('submit', function() {
+            if (rememberMeCheckbox.checked) {
+                localStorage.setItem('rememberedEmail', emailInput.value);
+                localStorage.setItem('rememberedPassword', passwordInput.value);
+                localStorage.setItem('isRemembered', 'true');
+            } else {
+                localStorage.removeItem('rememberedEmail');
+                localStorage.removeItem('rememberedPassword');
+                localStorage.removeItem('isRemembered');
+            }
+        });
     });
-  });
-
 </script>
+
+@* *@
+@* <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" *@
+@* 	 width="800px" height="600px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve"> *@
+@* <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="174.7899" y1="186.34" x2="330.1259" y2="186.34" gradientTransform="matrix(0.8538 0.5206 -0.5206 0.8538 147.9521 -79.1468)"> *@
+@*   <stop  offset="0" style="stop-color:#FFC035"/> *@
+@*   <stop  offset="0.221" style="stop-color:#F9A639"/> *@
+@*   <stop  offset="1" style="stop-color:#E64F48"/> *@
+@* </linearGradient> *@
+@*   <circle fill="url(#SVGID_1_)" cx="266.498" cy="211.378" r="77.668"/> *@
+@*   <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="290.551" y1="282.9592" x2="485.449" y2="282.9592"> *@
+@*     <stop  offset="0" style="stop-color:#FFA33A"/> *@
+@*     <stop  offset="0.0992" style="stop-color:#E4A544"/> *@
+@*     <stop  offset="0.9624" style="stop-color:#00B59C"/> *@
+@*   </linearGradient> *@
+@*   <circle fill="url(#SVGID_2_)" cx="388" cy="282.959" r="97.449"/> *@
+@*   <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="180.3469" y1="362.2723" x2="249.7487" y2="362.2723"> *@
+@*     <stop  offset="0" style="stop-color:#12B3D6"/> *@
+@*     <stop  offset="1" style="stop-color:#7853A8"/> *@
+@*   </linearGradient> *@
+@*   <circle fill="url(#SVGID_3_)" cx="215.048" cy="362.272" r="34.701"/> *@
+@*   <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="367.3469" y1="375.3673" x2="596.9388" y2="375.3673"> *@
+@*     <stop  offset="0" style="stop-color:#12B3D6"/> *@
+@*     <stop  offset="1" style="stop-color:#7853A8"/> *@
+@*   </linearGradient> *@
+@*   <circle fill="url(#SVGID_4_)" cx="482.143" cy="375.367" r="114.796"/> *@
+@*   <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="365.4405" y1="172.8044" x2="492.4478" y2="172.8044" gradientTransform="matrix(0.8954 0.4453 -0.4453 0.8954 127.9825 -160.7537)"> *@
+@*     <stop  offset="0" style="stop-color:#FFA33A"/> *@
+@*     <stop  offset="1" style="stop-color:#DF3D8E"/> *@
+@*   </linearGradient> *@
+@*   <circle fill="url(#SVGID_5_)" cx="435.095" cy="184.986" r="63.504"/> *@
+@* </svg> *@
+@* <div class="container"> *@
+@*   <h2>Hasta Girişi</h2> *@
+@*   <form> *@
+@*     <input type="text" class="email" placeholder="E-Posta"> *@
+@*     <br/> *@
+@*     <input type="text" class="pwd" placeholder="Şifre"> *@
+@*   </form> *@
+@*   <a href="#" class="link"> *@
+@*     Şifremi Unuttum? *@
+@*   </a> *@
+@*   <br/> *@
+@*   <button class="register"> *@
+@*     <a class="" asp-area="" asp-controller="Patient" asp-action="Register">Kayıt Ol</a> *@
+@*   </button> *@
+@*   <button class="signin"> *@
+@*     <a class="" asp-area="" asp-controller="Patient" asp-action="PatientPanel">Giriş Yap</a> *@
+@*   </button> *@
+@*   <h3>your registration is complete !</h3> *@
+@*   <h3>your sign in is complete !</h3> *@
+@*   <div class="reg"></div> *@
+@*   <div class="sig"></div> *@
+@* </div> *@
+@* *@
+@* <script> *@
+@*   $(document).ready(() => { *@
+@*     /*------- button with class register -------*/ *@
+@*     let reg_btn = $('.container .register') *@
+@* *@
+@*     /*------- button with class sign in --------*/ *@
+@*     let sig_btn = $('.container .signin') *@
+@* *@
+@*     /*------- back button ----------------------*/ *@
+@*     let back_btn = $('.container .back') *@
+@* *@
+@* *@
+@*     reg_btn.click(function(e){ *@
+@*       e.preventDefault() *@
+@*       $(this).siblings('.reg').css({ *@
+@*         'transform':'translateY(40%) scale(5)', *@
+@*         'border-radius':'0', *@
+@*         'width':'100%', *@
+@*         'height':'100%' *@
+@*       }).end(); *@
+@* *@
+@* *@
+@*       reg_btn.siblings('.container h3:nth-of-type(1)').css({ *@
+@*         'top':'40%', *@
+@*         'z-index':'8', *@
+@*       }).end().end(); *@
+@*     }); *@
+@* *@
+@*     sig_btn.on('click',function(e){ *@
+@*       e.preventDefault(); *@
+@*       $(this).siblings('.sig').css({ *@
+@*         'transform':'translateY(40%) scale(5)', *@
+@*         'border-radius':'0', *@
+@*         'width':'100%', *@
+@*         'height':'100%' *@
+@*       }).end(); *@
+@* *@
+@* *@
+@*       sig_btn.siblings('.container h3:nth-of-type(2)').css({ *@
+@*         'top':'40%', *@
+@*         'z-index':'8', *@
+@*       }).end().end(); *@
+@* *@
+@*     }); *@
+@*   }); *@
+@* *@
+@* </script> *@
+

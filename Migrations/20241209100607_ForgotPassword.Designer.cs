@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using MVC.Appointy.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MVC.Appointy.Migrations
 {
     [DbContext(typeof(AppointyDbContext))]
-    partial class AppointyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241209100607_ForgotPassword")]
+    partial class ForgotPassword
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

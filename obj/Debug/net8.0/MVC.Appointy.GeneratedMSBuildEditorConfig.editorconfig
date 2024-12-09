@@ -26,8 +26,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9yL0RvY3RvclBhbmVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Doctor/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9yL0ZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Footer/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9vdGVyL0Jsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Footer/GizlilikPolitikasi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9vdGVyL0dpemxpbGlrUG9saXRpa2FzaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Footer/Hakkimizda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9vdGVyL0hha2tpbWl6ZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Footer/KVKK.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9vdGVyL0tWS0suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Footer/ZiyaretSaatleri.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRm9vdGVyL1ppeWFyZXRTYWF0bGVyaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudC9Gb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/Views/Patient/PatientPanel.cshtml]

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Kayıt Ol";
 }
 <div class="h-screen md:flex" style="height: 780px;">
-	<div class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 justify-around items-center hidden">
+	<div class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-200 justify-around items-center hidden">
 		<div>
 			<p class="animated-text" style="margin-top: 40px;">
 				Giray Hastanesi
@@ -19,33 +19,67 @@
 		<div class="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
 	</div>
 	<div class="flex md:w-1/2 justify-center py-10 items-center bg-white">
-		<form class="form">
+		<form asp-action="Register" method="post" class="form">
 			<p class="title">Kayıt Ol!</p>
 			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4" style="width: 400px;">
-				<input class="pl-2 outline-none border-none w-full" type="text" name="" id="" placeholder="Adınız..." />
+				<input class="pl-2 outline-none border-none w-full" type="text" name="FirstName" id="FirstName" placeholder="Adınız..." required />
 			</div>
 			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
-				<input class="pl-2 outline-none border-none w-full" type="text" name="" id="" placeholder="Soyadınız..." />
+				<input class="pl-2 outline-none border-none w-full" type="text" name="LastName" id="LastName" placeholder="Soyadınız..." required />
 			</div>
 			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
-				<input class="pl-2 outline-none border-none w-full" type="text" name="" id="" placeholder="T.C. Kimlik No..." />
+				<input class="pl-2 outline-none border-none w-full" type="text" name="TCNo" id="TCNo" placeholder="T.C. Kimlik No..." required pattern="^\d{11}$" title="T.C. Kimlik No 11 haneli rakamlardan oluşmalıdır." />
 			</div>
 			<div>
-				<select class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 w-full" type="text">
+				<select class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 w-full" name="Gender" required>
 					<option value="">Cinsiyetiniz...</option>
 					<option value="Male">Erkek</option>
 					<option value="Female">Kadın</option>
 				</select>
 			</div>
 			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 w-full">
-				<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="E-Posta..." />
+				<input class="pl-2 outline-none border-none w-full" type="email" name="Email" id="Email" placeholder="E-Posta..." required />
 			</div>
 			<div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4 w-full">
-				<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Şifre..." />
+				<input class="pl-2 outline-none border-none w-full" type="password" name="Password" id="Password" placeholder="Şifre..." required />
+				<button type="button" id="togglePassword" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+					<i class="fas fa-eye" id="passwordIcon"></i>
+				</button>
 			</div>
 			<div class="flex items-center border-2 py-2 px-3 rounded-2xl w-full">
-				<input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Tekrar şifre..." />
+				<input class="pl-2 outline-none border-none w-full" type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Tekrar şifre..." required />
+				<button type="button" id="toggleConfirmPassword" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+					<i class="fas fa-eye" id="confirmPasswordIcon"></i>
+				</button>
 			</div>
+			<script>
+				document.getElementById('togglePassword').addEventListener('click', function() {
+					const passwordInput = document.getElementById('Password');
+					const icon = document.getElementById('passwordIcon');
+					if (passwordInput.type === 'password') {
+						passwordInput.type = 'text';
+						icon.classList.remove('fa-eye');
+						icon.classList.add('fa-eye-slash');
+					} else {
+						passwordInput.type = 'password';
+						icon.classList.remove('fa-eye-slash');
+						icon.classList.add('fa-eye');
+					}
+				});
+				document.getElementById('toggleConfirmPassword').addEventListener('click', function() {
+					const confirmPasswordInput = document.getElementById('ConfirmPassword');
+					const icon = document.getElementById('confirmPasswordIcon');
+					if (confirmPasswordInput.type === 'password') {
+						confirmPasswordInput.type = 'text';
+						icon.classList.remove('fa-eye');
+						icon.classList.add('fa-eye-slash');
+					} else {
+						confirmPasswordInput.type = 'password';
+						icon.classList.remove('fa-eye-slash');
+						icon.classList.add('fa-eye');
+					}
+				});
+			</script>
 			<button type="submit" class="block w-full bg-green-500 mt-4 py-2 rounded-2xl text-white font-semibold mb-2 w-full">Kayıt Ol</button>
 			<span class="signin">Zaten hesabınız var mı? <a class="link" style="color: #00b3f0" asp-area="" asp-controller="Patient" asp-action="Login">Giriş yapın</a></span>
 		</form>

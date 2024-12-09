@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVC.Appointy.Data;
 using MVC.Appointy.Models;
+using System.Net;
+using System.Net.Mail;
 
 namespace MVC.Appointy.Controllers;
 
@@ -39,11 +41,6 @@ public class DoctorController : Controller
     [HttpPost("doctorpanel")]
     public IActionResult DoctorPanel()
     {
-        // List<Doctor> objDoctorList = _db.Doctors.ToList();
-        // foreach (var doctor in objDoctorList)
-        //     doctor.Freetime = GetAvailableDates(doctor.Id); // Müsait günleri al
-        //
-        // return View(objDoctorList);
         return View();
     }
 
@@ -52,9 +49,58 @@ public class DoctorController : Controller
     {
         var appointments = _db.Appointments
             .Where(a => a.AppointmentDate.Date == date.Date && a.DoctorId == doctorId)
-            .Include(a => a.Patient) // Hasta bilgilerini dahil et
+            .Include(a => a.Patient)
             .ToList();
 
-        return View("DoctorPanel", appointments); // Randevuları DoctorPanel.cshtml'e gönder
+        return View("DoctorPanel", appointments);
+    }
+
+    public List<Doctor> GetDoctorList()
+    {
+        return _db.Doctors.ToList();
+    }
+    
+    [HttpGet]
+    public IActionResult ForgotPassword()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult ForgotPassword(string email)
+    {
+        var doctor = _db.Doctors.FirstOrDefault(d => d.Email == email);
+        if (doctor == null)
+        {
+            ModelState.AddModelError("EmailNotFound", "Bu e-posta adresi veritabanında bulunamadı.");
+            return View();
+        }
+
+        try
+        {
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential("your_email@gmail.com", "your_password"),
+                EnableSsl = true,
+            };
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress("your_email@gmail.com"),
+                Subject = "Şifre Sıfırlama",
+                Body = "Şifrenizi sıfırlamak için lütfen şu bağlantıyı tıklayın: [link]",
+                IsBodyHtml = true,
+            };
+
+            mailMessage.To.Add(email);
+            smtpClient.Send(mailMessage);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "E-posta gönderme işlemi sırasında bir hata oluştu.");
+        }
+
+        return Ok();
     }
 }

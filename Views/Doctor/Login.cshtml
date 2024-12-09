@@ -3,8 +3,8 @@
     ViewData["Title"] = "Giriş Yap";
 }
 
-<div class="min-h-[calc(80vh-100px)] flex items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 py-8">
-    <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+<div class="min-h-[calc(80vh-100px)] flex items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 py-8 w-full">
+    <div class="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg">
         <div class="text-center mb-8">
             <h2 class="text-3xl font-bold text-gray-800">
                 <i class="fas fa-user-md text-blue-600 mr-2"></i>
@@ -51,7 +51,7 @@
                     </label>
                 </div>
                 <div class="text-sm">
-                    <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
+                    <a href="@Url.Action("ForgotPassword", "Doctor")"  class="font-medium text-blue-600 hover:text-blue-500">
                         Şifremi Unuttum
                     </a>
                 </div>
@@ -99,5 +99,33 @@
             icon.classList.remove('fa-eye-slash');
             icon.classList.add('fa-eye');
         }
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const rememberMeCheckbox = document.getElementById('remember_me');
+        const form = document.querySelector('form');
+
+        const savedEmail = localStorage.getItem('rememberedEmail');
+        const savedPassword = localStorage.getItem('rememberedPassword');
+        const isRemembered = localStorage.getItem('isRemembered');
+
+        if (isRemembered === 'true' && savedEmail && savedPassword) {
+            emailInput.value = savedEmail;
+            passwordInput.value = savedPassword;
+            rememberMeCheckbox.checked = true;
+        }
+
+        form.addEventListener('submit', function() {
+            if (rememberMeCheckbox.checked) {
+                localStorage.setItem('rememberedEmail', emailInput.value);
+                localStorage.setItem('rememberedPassword', passwordInput.value);
+                localStorage.setItem('isRemembered', 'true');
+            } else {
+                localStorage.removeItem('rememberedEmail');
+                localStorage.removeItem('rememberedPassword');
+                localStorage.removeItem('isRemembered');
+            }
+        });
     });
 </script>

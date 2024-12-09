@@ -10,15 +10,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="~/MVC.Appointy.styles.css" asp-append-version="true"/>
-    
+    <script src="https://kit.fontawesome.com/2efc16a506.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
     <nav class="bg-gray-700">
         <div class="container mx-auto py-4 flex justify-between items-center">
             <a class="btn btn-ghost" asp-controller="Home" asp-action="Index">
-                <img src="~/img/logo.png" alt="Appointy Logo" class="h-40 w-auto rounded-full" style="border-radius: 50%;" />
+                <img src="~/img/logo.png" alt="Appointy Logo" class="h-32 w-auto" />
             </a>
             <div class="flex space-x-10">
                 <div class="flex items-center space-x-2">
@@ -36,6 +37,9 @@
                 <div class="flex items-center space-x-2">
                     <span class="text-gray-50"> <a asp-controller="Contact" asp-action="Contact"><i class="fas fa-phone-volume mr-2"></i>İletişim</a></span>
                 </div>
+                @* <div class="flex items-center space-x-2"> *@
+                @*     <span class="text-gray-50"> <a asp-controller="Deneme" asp-action="Deneme"><i class="fas fa-phone-volume mr-2"></i>Deneme</a></span> *@
+                @* </div> *@
             </div>
             <div class="lg:flex hidden items-center space-x-2 bg-white py-1 px-2 rounded-full">
                 <span>
@@ -106,12 +110,12 @@
             @*     </div> *@
             @* </div> *@
         </div>
-        <div class="container mx-auto px-4">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
     </nav>
+    <div class="container mx-auto px-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
 </header>  
 
 <!-- Footer -->
@@ -119,32 +123,32 @@
     <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav class="flex flex-wrap justify-center -mx-5 -my-2">
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a asp-controller="Footer" asp-action="Hakkimizda" class="text-base leading-6 text-blue-500 hover:text-gray-900">
                     Hakkımızda
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a asp-controller="Footer" asp-action="Blog" class="text-base leading-6 text-blue-500 hover:text-gray-900">
                     Blog
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a asp-controller="Footer" asp-action="GizlilikPolitikasi" class="text-base leading-6 text-blue-500 hover:text-gray-900">
                     Gizlilik Politikası
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a asp-controller="Footer" asp-action="ZiyaretSaatleri" class="text-base leading-6 text-blue-500 hover:text-gray-900">
                     Ziyaret Saatleri
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a asp-controller="Footer" asp-action="KVKK" class="text-base leading-6 text-blue-500 hover:text-gray-900">
                     KVKK
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a asp-controller="Contact" asp-action="Contact" class="text-base leading-6 text-blue-500 hover:text-gray-900">
                     İletişim
                 </a>
             </div>

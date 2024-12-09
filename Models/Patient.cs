@@ -10,7 +10,7 @@ public enum Gender
 
 public class Patient
 {
-    public Patient(int id, string firstName, string lastName, Gender gender, string tc, DateTime birthDate, string email, string password, ICollection<Appointment> appointments, Appointment newAppointment) : this()
+    public Patient(int id, string firstName, string lastName, Gender gender, string tc, DateTime birthDate, string email, string password) : this()
     {
         Id = id;
         FirstName = firstName;
@@ -20,8 +20,6 @@ public class Patient
         BirthDate = birthDate;
         Email = email;
         Password = password;
-        Appointments = appointments;
-        NewAppointment = newAppointment;
     }
 
     public Patient()
@@ -53,7 +51,7 @@ public class Patient
         get { return FirstName + " " + LastName; }
     }
     
-    public ICollection<Appointment> Appointments { get; set; }
+    public List<Appointment> Appointments { get; set; } = new List<Appointment>();
     public ICollection<Contact> Contacts { get; set; }
     public Appointment NewAppointment { get; set; }
 }
