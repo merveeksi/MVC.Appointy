@@ -37,18 +37,18 @@ MVC.Appointy, kullanıcıların iletişim kurmasını sağlayan bir web uygulama
 
 ## Ekran Görüntüleri
 
-![Anasayfa](/images/s1.png)
+![Anasayfa](/img/s1.png)
 
-![Doktor Girişi](/images/s2.png)
+![Doktor Girişi](/img/s2.png)
 
-![Hasta Girişi](/images/s3.png)
+![Hasta Girişi](/img/s3.png)
 
-![Randevu Oluştur](/images/s4.png)
+![Randevu Oluştur](/img/s4.png)
 
-![İletişim](/images/s5.png)
+![İletişim](/img/s5.png)
 
-![Kayıt Ol](/images/s6.png)
+![Kayıt Ol](/img/s6.png)
 
-![Doktor Paneli](/images/s7.png)
+![Doktor Paneli](/img/s7.png)
 
-![Hasta Paneli](/images/s8.png)
+![Hasta Paneli](/img/s8.png)
