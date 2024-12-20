@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/obj/Debug/net8.0/scopedcss/projectbundle/MVC.Appointy.bundle.scp.css",
-      "PackagePath": "staticwebassets/MVC.Appointy.bundle.scp.css"
+      "PackagePath": "staticwebassets/MVC.Appointy.xzhuu9f9js.bundle.scp.css"
     },
     {
       "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/css/site.css",
@@ -91,6 +91,10 @@
     {
       "Id": "/Users/pc/Desktop/MVC.Appointy/MVC.Appointy/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MVC.Appointy.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MVC.Appointy.Microsoft.AspNetCore.StaticWebAssets.props",
