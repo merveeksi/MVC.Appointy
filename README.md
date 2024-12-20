@@ -1,6 +1,6 @@
 # MVC.Appointy
 
-MVC.Appointy, kullanıcıların iletişim kurmasını sağlayan bir web uygulamasıdır. Bu proje, MVC (Model-View-Controller) mimarisi kullanılarak geliştirilmiştir ve kullanıcı dostu bir arayüz sunmaktadır.
+MVC.Appointy, hastane randevu sistemi olarak kullanıcıların iletişim kurmasını sağlayan bir web uygulamasıdır. Bu proje, MVC (Model-View-Controller) mimarisi kullanılarak geliştirilmiştir ve kullanıcı dostu bir arayüz sunmaktadır.
 
 ## Kullanılan Teknolojiler
 ## Kullanılan Teknolojiler
